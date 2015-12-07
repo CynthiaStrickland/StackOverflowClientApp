@@ -19,6 +19,7 @@
 		3D7D721E1C15F8710090A82C /* SearchQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D721D1C15F8710090A82C /* SearchQuestionsViewController.m */; };
 		3D7D72211C15F93B0090A82C /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72201C15F93B0090A82C /* MenuTableViewController.m */; };
 		3D7D72241C15F96F0090A82C /* MenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72231C15F96F0090A82C /* MenuContainerViewController.m */; };
+		3D7D72261C15FF010090A82C /* emptyStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D72251C15FF010090A82C /* emptyStar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3D7D72201C15F93B0090A82C /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewController.m; path = ../MenuTableViewController.m; sourceTree = "<group>"; };
 		3D7D72221C15F96F0090A82C /* MenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuContainerViewController.h; sourceTree = "<group>"; };
 		3D7D72231C15F96F0090A82C /* MenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuContainerViewController.m; sourceTree = "<group>"; };
+		3D7D72251C15FF010090A82C /* emptyStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyStar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				3D7D71FC1C15F7AE0090A82C /* StackOverFlowClientAppTests */,
 				3D7D72071C15F7AE0090A82C /* StackOverFlowClientAppUITests */,
 				3D7D71E11C15F7AE0090A82C /* Products */,
+				3D7D72251C15FF010090A82C /* emptyStar.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D7D71F31C15F7AE0090A82C /* LaunchScreen.storyboard in Resources */,
+				3D7D72261C15FF010090A82C /* emptyStar.png in Resources */,
 				3D7D71F01C15F7AE0090A82C /* Assets.xcassets in Resources */,
 				3D7D71EE1C15F7AE0090A82C /* Main.storyboard in Resources */,
 			);

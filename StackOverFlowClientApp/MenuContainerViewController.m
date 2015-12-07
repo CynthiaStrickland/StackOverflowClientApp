@@ -13,7 +13,7 @@
 
 CGFloat const kBurgerOpenScreenDivider = 3.0;
 CGFloat const kBurgerOpenScreenMultiplier = 2.0;
-CGFloat const kbuergerButtonWidth = 50.0;
+CGFloat const kburgerButtonWidth = 50.0;
 CGFloat const kburgerButtonHeight = 50.0;
 
 NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
@@ -38,7 +38,9 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
     [super viewDidLoad];
     [self setupAllViewControllers];
     [self setupMainContentViewController];
-    [self setupAdditonalViewControllers];
+    [self setupAdditionalViewController];
+    
+    self.viewControllers
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,13 +80,45 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
     
     MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestionsVC"];
     [self addChildViewController:myQuestionsVC];
-    myQuestionsVC.view.frame = self.view.frame;
     
-    [self.view addSubview:myQuestionsVC.view];
-    [myQuestionsVC didMoveToParentViewController:self];
     self.myQuestionsVC = myQuestionsVC;
     
 }
+
+- (void)setupBurgerButton {
+    UIButton *burgerButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, kburgerButtonWidth, kburgerButtonHeight)];
+    
+    [burgerButton setImage:@"emptyStar" forState:UIControlStateNormal];
+    
+    [self.searchVC.view addSubview:burgerButton];
+    
+    [burgerButton addTarget:self action:@selector(burgerButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
+-(void)setupPanGestere {
+    self.panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(topViewControllerPanned:)];
+}
+
+- (void)burgerButtonPressed:(UIButton *)sender {
+    
+    [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^ {
+        self.searchVC.view.center = CGPointMake(self.view.center.x *kBurgerOpenScreenMultiplier, self.searchVC.view.center.y);
+    } completion:^(BOOL finished) {
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapToCloseMenu)];
+        sender.userInteractionEnabled = NO;
+    }];
+    
+- (void)tapToCloseMenu:(UITapGestureRecognizer *)tap {
+        [self.searchVC.view removeGestureRecognizer:tap];
+        [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^ {
+            self.searchVC.view.center = self.view.center;
+        } completion:^(BOOL finished) {
+            self.burgerButton.userInteractionEnabled = YES;
+        }];
+    }
+    
 @end
 
 
