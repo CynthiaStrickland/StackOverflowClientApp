@@ -39,8 +39,10 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
     [self setupAllViewControllers];
     [self setupMainContentViewController];
     [self setupAdditionalViewController];
+    [self setupPanGesture];
+    [self setupBurgerButton];
     
-    self.viewControllers
+    self.viewControllers = @[self.searchVC, self.myQuestionsVC];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -96,10 +98,6 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
     
 }
 
--(void)setupPanGestere {
-    self.panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(topViewControllerPanned:)];
-}
-
 - (void)burgerButtonPressed:(UIButton *)sender {
     
     [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^ {
@@ -108,19 +106,59 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapToCloseMenu)];
         sender.userInteractionEnabled = NO;
+        
     }];
-    
+}
+
+- (void)setupPanGesture {
+    self.panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(topViewControllerPanned:)];
+}
+
 - (void)tapToCloseMenu:(UITapGestureRecognizer *)tap {
-        [self.searchVC.view removeGestureRecognizer:tap];
-        [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^ {
-            self.searchVC.view.center = self.view.center;
-        } completion:^(BOOL finished) {
-            self.burgerButton.userInteractionEnabled = YES;
-        }];
+    [self.searchVC.view removeGestureRecognizer:tap];
+    [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^ {
+        self.searchVC.view.center = self.view.center;
+    } completion:^(BOOL finished) {
+        self.burgerButton.userInteractionEnabled = YES;
+    }];
+}
+
+- (void)topViewControllerPanned:(UIPanGestureRecognizer *)sender {
+    CGPoint velocity = [sender velocityInView:self.searchVC.view];
+    CGPoint translation = [sender translationInView:self.searchVC.view];
+    
+    if (sender.state == UIGestureRecognizerStateChanged) {
+        if (velocity.x > 0) {
+            self.searchVC.view.center = CGPointMake(self.searchVC.view.center.x + translation.x, self.searchVC.view.center.y);
+            [sender setTranslation:CGPointZero inView:self.searchVC.view];
+        }
     }
     
-@end
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        if (self.searchVC.view.frame.origin.x > self.searchVC.view.frame.size.width / kBurgerOpenScreenDivider) {
+            [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^{
+                self.searchVC.view.center = CGPointMake(self.view.center.x * kBurgerOpenScreenMultiplier, self.searchVC.view.center.y);
+                
+        } completion:^(BOOL finished) {
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapToCloseMenu:)];
+            [self.searchVC.view addGestureRecognizer:tap];
+            self.burgerButton.userInteractionEnabled = NO;
+        }];
+            
+        }
+    } else {
+        [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^{
+            self.searchVC.view.center = CGPointMake(self.view.center.x, self.searchVC.view.center.y);
+        } completion:nil];
+    }
+}
 
+
+
+
+
+@end
+    
 
 
 
