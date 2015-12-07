@@ -182,7 +182,12 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
     }];
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIViewController *viewController = self.viewControllers[indexPath.row];
+    if (![viewController isEqual:self.searchVC]) {
+        [self switchToViewController:viewController];
+    }
+}
 
 @end
     
