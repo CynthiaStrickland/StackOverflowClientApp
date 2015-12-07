@@ -8,15 +8,15 @@
 
 #import "OAuthWebViewController.h"
 @import WebKit;
-@import WKWebView;
 
-NSString const *kClientID = @"6106";
-NSString const *kBaseURL = @"https://codefellows.com";
+NSString const *kClientID = @"6085";
+NSString const *kBaseURL = @"https://stackexchange.com/oauth/dialog?";
+NSString const *kRedirectURI = @"https://stackexchange.com/oauth/login_success";
 
+@interface OAuthWebViewController () <WKNavigationDelegate>
 
+@property(strong, nonatomic) WKWebView *webView;
 
-
-@interface OAuthWebViewController ()
 
 @end
 
@@ -24,20 +24,40 @@ NSString const *kBaseURL = @"https://codefellows.com";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Do any additional setup after loading the view.
+    
+    self.webView = [[WKWebView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:self.webView];
+    
+    self.webView.navigationDelegate = self;
+    
     NSString *stackURLString = [NSString stringWithFormat:@"%@client_id=%@&redirect_uri=%@", kBaseURL, kClientID, kRedirectURI];
-    NSURL *stackURL = [NSURL URLWithString:stackURLString]];
+    
+    NSURL *stackURL = [NSURL URLWithString:stackURLString];
+    
     [self.webView loadRequest:[NSURLRequest requestWithURL:stackURL]];
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(nonnull WKNavigationAction *)navigationAction decisionHandler:(nonnull void (^)(WKNavigationActionPolicy))decisionHandler {
+-(void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
     
-    NSRULRequest *request = navigationAction.reqeust;
-    NSURL *requestURL = 
+    NSURLRequest *request = navigationAction.request;
+    NSURL *requestURL = request.URL;
+    
+    if([requestURL.description containsString:@"access_token"]){
+        NSArray *urlComponents = [[requestURL description] componentsSeparatedByString:@"="];
+        NSString *accessToken = urlComponents.lastObject;
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:accessToken forKey:@"accessToken"];
+        [userDefaults synchronize];
+        
+        if (self.completion) {
+            self.completion();
+        }
+    }
+    
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
 @end

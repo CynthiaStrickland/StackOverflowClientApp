@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		3D7D71E51C15F7AE0090A82C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D71E41C15F7AE0090A82C /* main.m */; };
 		3D7D71E81C15F7AE0090A82C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D71E71C15F7AE0090A82C /* AppDelegate.m */; };
-		3D7D71EB1C15F7AE0090A82C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D71EA1C15F7AE0090A82C /* ViewController.m */; };
 		3D7D71EE1C15F7AE0090A82C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D71EC1C15F7AE0090A82C /* Main.storyboard */; };
 		3D7D71F01C15F7AE0090A82C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D71EF1C15F7AE0090A82C /* Assets.xcassets */; };
 		3D7D71F31C15F7AE0090A82C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D71F11C15F7AE0090A82C /* LaunchScreen.storyboard */; };
 		3D7D71FE1C15F7AE0090A82C /* StackOverFlowClientAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D71FD1C15F7AE0090A82C /* StackOverFlowClientAppTests.m */; };
 		3D7D72091C15F7AE0090A82C /* StackOverFlowClientAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72081C15F7AE0090A82C /* StackOverFlowClientAppUITests.m */; };
 		3D7D721B1C15F85E0090A82C /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */; };
-		3D7D721E1C15F8710090A82C /* SearchQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D721D1C15F8710090A82C /* SearchQuestionsViewController.m */; };
+		3D7D721E1C15F8710090A82C /* MainContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D721D1C15F8710090A82C /* MainContentViewController.m */; };
 		3D7D72211C15F93B0090A82C /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72201C15F93B0090A82C /* MenuTableViewController.m */; };
 		3D7D72241C15F96F0090A82C /* MenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72231C15F96F0090A82C /* MenuContainerViewController.m */; };
 		3D7D72261C15FF010090A82C /* emptyStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D72251C15FF010090A82C /* emptyStar.png */; };
@@ -46,8 +45,6 @@
 		3D7D71E41C15F7AE0090A82C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D7D71E61C15F7AE0090A82C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3D7D71E71C15F7AE0090A82C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3D7D71E91C15F7AE0090A82C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3D7D71EA1C15F7AE0090A82C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3D7D71ED1C15F7AE0090A82C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D7D71EF1C15F7AE0090A82C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D7D71F21C15F7AE0090A82C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +57,8 @@
 		3D7D720A1C15F7AE0090A82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D7D72191C15F85E0090A82C /* MyQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsViewController.h; sourceTree = "<group>"; };
 		3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
-		3D7D721C1C15F8710090A82C /* SearchQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchQuestionsViewController.h; sourceTree = "<group>"; };
-		3D7D721D1C15F8710090A82C /* SearchQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchQuestionsViewController.m; sourceTree = "<group>"; };
+		3D7D721C1C15F8710090A82C /* MainContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainContentViewController.h; sourceTree = "<group>"; };
+		3D7D721D1C15F8710090A82C /* MainContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainContentViewController.m; sourceTree = "<group>"; };
 		3D7D721F1C15F93B0090A82C /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewController.h; path = ../MenuTableViewController.h; sourceTree = "<group>"; };
 		3D7D72201C15F93B0090A82C /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewController.m; path = ../MenuTableViewController.m; sourceTree = "<group>"; };
 		3D7D72221C15F96F0090A82C /* MenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuContainerViewController.h; sourceTree = "<group>"; };
@@ -124,20 +121,18 @@
 			isa = PBXGroup;
 			children = (
 				3D7D71EC1C15F7AE0090A82C /* Main.storyboard */,
-				3D7D72291C1611C90090A82C /* OAuthWebViewController.h */,
-				3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */,
 				3D7D71E61C15F7AE0090A82C /* AppDelegate.h */,
 				3D7D71E71C15F7AE0090A82C /* AppDelegate.m */,
+				3D7D72291C1611C90090A82C /* OAuthWebViewController.h */,
+				3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */,
+				3D7D721C1C15F8710090A82C /* MainContentViewController.h */,
+				3D7D721D1C15F8710090A82C /* MainContentViewController.m */,
 				3D7D72221C15F96F0090A82C /* MenuContainerViewController.h */,
 				3D7D72231C15F96F0090A82C /* MenuContainerViewController.m */,
 				3D7D721F1C15F93B0090A82C /* MenuTableViewController.h */,
 				3D7D72201C15F93B0090A82C /* MenuTableViewController.m */,
 				3D7D72191C15F85E0090A82C /* MyQuestionsViewController.h */,
 				3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */,
-				3D7D721C1C15F8710090A82C /* SearchQuestionsViewController.h */,
-				3D7D721D1C15F8710090A82C /* SearchQuestionsViewController.m */,
-				3D7D71E91C15F7AE0090A82C /* ViewController.h */,
-				3D7D71EA1C15F7AE0090A82C /* ViewController.m */,
 				3D7D71E31C15F7AE0090A82C /* Supporting Files */,
 			);
 			path = StackOverFlowClientApp;
@@ -305,11 +300,10 @@
 			files = (
 				3D7D72241C15F96F0090A82C /* MenuContainerViewController.m in Sources */,
 				3D7D722B1C1611C90090A82C /* OAuthWebViewController.m in Sources */,
-				3D7D71EB1C15F7AE0090A82C /* ViewController.m in Sources */,
 				3D7D72211C15F93B0090A82C /* MenuTableViewController.m in Sources */,
 				3D7D71E81C15F7AE0090A82C /* AppDelegate.m in Sources */,
 				3D7D71E51C15F7AE0090A82C /* main.m in Sources */,
-				3D7D721E1C15F8710090A82C /* SearchQuestionsViewController.m in Sources */,
+				3D7D721E1C15F8710090A82C /* MainContentViewController.m in Sources */,
 				3D7D721B1C15F85E0090A82C /* MyQuestionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

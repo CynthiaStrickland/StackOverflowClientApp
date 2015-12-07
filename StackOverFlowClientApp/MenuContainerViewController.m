@@ -8,189 +8,204 @@
 
 #import "MenuContainerViewController.h"
 #import "MenuTableViewController.h"
-#import "SearchQuestionsViewcontroller.h"
+#import "MainContentViewController.h"
 #import "MyQuestionsViewController.h"
 
-CGFloat const kBurgerOpenScreenDivider = 3.0;
-CGFloat const kBurgerOpenScreenMultiplier = 2.0;
+CGFloat const kburgerOpenScreenDivider = 3.0;
+CGFloat const kburgerOpenScreenMultiplier = 2.0;
 CGFloat const kburgerButtonWidth = 50.0;
 CGFloat const kburgerButtonHeight = 50.0;
 
-NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
+NSTimeInterval const ktimeToSlideMenuOpen = 0.2;
 
+@interface MenuContainerViewController ()<UITableViewDelegate>
 
-@interface MenuContainerViewController () <UITableViewDelegate>
-
-@property (strong, nonatomic) MenuTableViewController *leftMenuVC;
-@property (strong, nonatomic) SearchQuestionsViewController *searchVC;
-@property (strong, nonatomic) MyQuestionsViewController *myQuestionsVC;
-
-@property (strong, nonatomic) UIButton *burgerButton;
-@property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
-
-@property (strong, nonatomic) NSArray *viewControllers;
+@property (strong,nonatomic) MenuTableViewController *leftMenuViewController;
+@property (strong,nonatomic) MainContentViewController *topViewController;
+@property (strong, nonatomic) MyQuestionsViewController *myQuestionsViewController;
+@property(strong, nonatomic) UIButton *burgerButton;
+@property(strong, nonatomic) UIPanGestureRecognizer *panGesture;
+@property (strong,nonatomic) NSArray *viewControllers;
 
 @end
+
+
 
 @implementation MenuContainerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self setupAllViewControllers];
-    [self setupMainContentViewController];
-    [self setupAdditionalViewController];
     [self setupPanGesture];
     [self setupBurgerButton];
     
-    self.viewControllers = @[self.searchVC, self.myQuestionsVC];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
+//MARK: View Controller Setup
 
-- (void)setupAllViewControllers {
+-(void)setupAllViewControllers{
+    [self setupMenuViewController];
+    [self setupMainContentViewController];
+    [self setupAdditonalMenuViewControllers];
     
+    self.viewControllers = @[self.topViewController, self.myQuestionsViewController];
 }
 
-- (void)setupMenuViewController {
-    
+-(BOOL)prefersStatusBarHidden{
+    return true;
+}
+
+-(void)setupMenuViewController{
     MenuTableViewController *leftMenuVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LeftMenuVC"];
     leftMenuVC.tableView.delegate = self;
+    
     [self addChildViewController:leftMenuVC];
     leftMenuVC.view.frame = self.view.frame;
     
     [self.view addSubview:leftMenuVC.view];
     [leftMenuVC didMoveToParentViewController:self];
-    self.leftMenuVC = leftMenuVC;
-    
+    self.leftMenuViewController = leftMenuVC;
 }
 
-- (void)setupMainContentViewController {
+-(void)setupMainContentViewController{
+    MainContentViewController *contentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainContentVC"];
     
-    SearchQuestionsViewController *searchVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchVC"];
-    [self addChildViewController:searchVC];
-    searchVC.view.frame = self.view.frame;
-    
-    [self.view addSubview:searchVC.view];
-    [searchVC didMoveToParentViewController:self];
-    self.searchVC = searchVC;
-    
+    [self addChildViewController:contentViewController];
+    contentViewController.view.frame = self.view.frame;
+    [self.view addSubview:contentViewController.view];
+    [contentViewController didMoveToParentViewController:self];
+    self.topViewController = contentViewController;
 }
 
-- (void)setupAdditionalViewController {
+-(void)setupAdditonalMenuViewControllers{
     
     MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestionsVC"];
-    [self addChildViewController:myQuestionsVC];
-    
-    self.myQuestionsVC = myQuestionsVC;
+    self.myQuestionsViewController = myQuestionsVC;
     
 }
 
-- (void)setupBurgerButton {
-    UIButton *burgerButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, kburgerButtonWidth, kburgerButtonHeight)];
-    
-    [burgerButton setImage:@"emptyStar" forState:UIControlStateNormal];
-    
-    [self.searchVC.view addSubview:burgerButton];
-    
+//MARK: Setup Menu Button
+-(void)setupBurgerButton{
+    UIButton *burgerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kburgerButtonWidth, kburgerButtonHeight)];
+    [burgerButton setImage:[UIImage imageNamed:@"burger"] forState:UIControlStateNormal];
+    [self.topViewController.view addSubview:burgerButton];
     [burgerButton addTarget:self action:@selector(burgerButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    
+    self.burgerButton = burgerButton;
 }
 
-- (void)burgerButtonPressed:(UIButton *)sender {
-    
-    [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^ {
-        self.searchVC.view.center = CGPointMake(self.view.center.x *kBurgerOpenScreenMultiplier, self.searchVC.view.center.y);
+
+//MARK: Pan Gesture Setup
+-(void)setupPanGesture{
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(topViewControllerPanned:)];
+    [self.topViewController.view addGestureRecognizer:pan];
+    self.panGesture = pan;
+}
+
+
+//MARK: Menu Button Pressed
+-(void)burgerButtonPressed:(UIButton *)sender {
+    [UIView animateWithDuration:ktimeToSlideMenuOpen animations:^{
+        self.topViewController.view.center = CGPointMake(self.view.center.x * kburgerOpenScreenMultiplier, self.topViewController.view.center.y);
     } completion:^(BOOL finished) {
         
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapToCloseMenu)];
-        sender.userInteractionEnabled = NO;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToCloseMenu:)];
+        [self.topViewController.view addGestureRecognizer:tap];
+        sender.userInteractionEnabled = false;
         
     }];
 }
 
-- (void)setupPanGesture {
-    self.panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(topViewControllerPanned:)];
-}
-
-- (void)tapToCloseMenu:(UITapGestureRecognizer *)tap {
-    [self.searchVC.view removeGestureRecognizer:tap];
-    [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^ {
-        self.searchVC.view.center = self.view.center;
+-(void)tapToCloseMenu:(UITapGestureRecognizer *)tap {
+    [self.topViewController.view removeGestureRecognizer:tap];
+    [UIView animateWithDuration:0.3 animations:^{
+        self.topViewController.view.center = self.view.center;
     } completion:^(BOOL finished) {
-        self.burgerButton.userInteractionEnabled = YES;
+        
+        self.burgerButton.userInteractionEnabled = true;
+        
     }];
 }
 
-- (void)topViewControllerPanned:(UIPanGestureRecognizer *)sender {
-    CGPoint velocity = [sender velocityInView:self.searchVC.view];
-    CGPoint translation = [sender translationInView:self.searchVC.view];
+
+//MARK: View Controller Transitions
+-(void)topViewControllerPanned:(UIPanGestureRecognizer *)sender {
+    
+    CGPoint velocity = [sender velocityInView:self.topViewController.view];
+    CGPoint translation = [sender translationInView:self.topViewController.view];
     
     if (sender.state == UIGestureRecognizerStateChanged) {
         if (velocity.x > 0) {
-            self.searchVC.view.center = CGPointMake(self.searchVC.view.center.x + translation.x, self.searchVC.view.center.y);
-            [sender setTranslation:CGPointZero inView:self.searchVC.view];
+            self.topViewController.view.center = CGPointMake(self.topViewController.view.center.x + translation.x, self.topViewController.view.center.y);
+            [sender setTranslation:CGPointZero inView:self.topViewController.view];
         }
     }
     
     if (sender.state == UIGestureRecognizerStateEnded) {
-        if (self.searchVC.view.frame.origin.x > self.searchVC.view.frame.size.width / kBurgerOpenScreenDivider) {
-            [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^{
-                self.searchVC.view.center = CGPointMake(self.view.center.x * kBurgerOpenScreenMultiplier, self.searchVC.view.center.y);
-                
-        } completion:^(BOOL finished) {
-            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapToCloseMenu:)];
-            [self.searchVC.view addGestureRecognizer:tap];
-            self.burgerButton.userInteractionEnabled = NO;
-        }];
+        if (self.topViewController.view.frame.origin.x > self.topViewController.view.frame.size.width / kburgerOpenScreenDivider) {
+            NSLog(@"user is opening menu");
             
+            [UIView animateWithDuration:ktimeToSlideMenuOpen animations:^{
+                self.topViewController.view.center = CGPointMake(self.view.center.x * kburgerOpenScreenMultiplier, self.topViewController.view.center.y);
+            } completion:^(BOOL finished) {
+                
+                UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToCloseMenu:)];
+                [self.topViewController.view addGestureRecognizer:tap];
+                self.burgerButton.userInteractionEnabled = false;
+                
+            }];
+        } else {
+            [UIView animateWithDuration:ktimeToSlideMenuOpen animations:^{
+                self.topViewController.view.center = CGPointMake(self.view.center.x, self.topViewController.view.center.y);
+            } completion:^(BOOL finished) {
+                
+            }];
         }
-    } else {
-        [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^{
-            self.searchVC.view.center = CGPointMake(self.view.center.x, self.searchVC.view.center.y);
-        } completion:nil];
     }
 }
 
-- (void)switchToViewController:(UIViewController *)ViewController {
-    [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^{
-        self.searchVC.view.frame = CGRectMake(self.view.frame.size.width, self.searchVC.view.frame.origin.y, self.searchVC.view.frame.size.width, self.searchVC.view.frame.size.height);
+-(void)switchToViewController:(UIViewController *)viewController{
+    [UIView animateWithDuration:ktimeToSlideMenuOpen animations:^{
+        
+        self.topViewController.view.frame = CGRectMake(self.view.frame.size.width,self.topViewController.view.frame.origin.y,self.topViewController.view.frame.size.width, self.topViewController.view.frame.size.height);
         
     } completion:^(BOOL finished) {
-        CGRect oldFrame = self.searchVC.view.frame;
-        [self.searchVC willMoveToParentViewController:nil];
-        [self.searchVC.view removeFromSuperview];
-        [self.searchVC removeFromParentViewController];
+        CGRect oldFrame = self.topViewController.view.frame;
+        [self.topViewController willMoveToParentViewController:nil];
+        [self.topViewController.view removeFromSuperview];
+        [self.topViewController removeFromParentViewController];
         
-        [self addChildViewController:_searchVC];
-        ViewController.view.frame = oldFrame;
-        [self.view addSubview:ViewController.view];
-        [ViewController didMoveToParentViewController:self];
-        self.searchVC = ViewController;
+        [self addChildViewController:viewController];
+        viewController.view.frame = oldFrame;
+        [self.view addSubview:viewController.view];
+        [viewController didMoveToParentViewController:self];
+        self.topViewController = viewController;
         
         [self.burgerButton removeFromSuperview];
-        [self.searchVC.view addSubview:self.burgerButton];
+        [self.topViewController.view addSubview:self.burgerButton];
         
-        [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^{
-            self.searchVC.view.center = self.view.center;
+        
+        [UIView animateWithDuration:ktimeToSlideMenuOpen animations:^{
+            self.topViewController.view.center = self.view.center;
         } completion:^(BOOL finished) {
-            [self.searchVC.view addGestureRecognizer:self.panGesture];
+            [self.topViewController.view addGestureRecognizer:self.panGesture];
             self.burgerButton.userInteractionEnabled = true;
-        
         }];
     }];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+#pragma mark - UITableViewDelegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Selected Menu Item:%ld",(long)indexPath.row);
+    
     UIViewController *viewController = self.viewControllers[indexPath.row];
-    if (![viewController isEqual:self.searchVC]) {
+    if (![viewController isEqual:self.topViewController]) {
         [self switchToViewController:viewController];
     }
 }
 
 @end
-    
+
 
 
 

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainContentViewController.h
 //  StackOverFlowClientApp
 //
 //  Created by Cynthia Whitlatch on 12/7/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MainContentViewController : UIViewController
 
 @end
-
