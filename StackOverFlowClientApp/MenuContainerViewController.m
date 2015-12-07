@@ -153,7 +153,34 @@ NSTimeInterval const kTimeToSlideMenuOpen = 0.2;
     }
 }
 
-
+- (void)switchToViewController:(UIViewController *)ViewController {
+    [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^{
+        self.searchVC.view.frame = CGRectMake(self.view.frame.size.width, self.searchVC.view.frame.origin.y, self.searchVC.view.frame.size.width, self.searchVC.view.frame.size.height);
+        
+    } completion:^(BOOL finished) {
+        CGRect oldFrame = self.searchVC.view.frame;
+        [self.searchVC willMoveToParentViewController:nil];
+        [self.searchVC.view removeFromSuperview];
+        [self.searchVC removeFromParentViewController];
+        
+        [self addChildViewController:_searchVC];
+        ViewController.view.frame = oldFrame;
+        [self.view addSubview:ViewController.view];
+        [ViewController didMoveToParentViewController:self];
+        self.searchVC = ViewController;
+        
+        [self.burgerButton removeFromSuperview];
+        [self.searchVC.view addSubview:self.burgerButton];
+        
+        [UIView animateWithDuration:kTimeToSlideMenuOpen animations:^{
+            self.searchVC.view.center = self.view.center;
+        } completion:^(BOOL finished) {
+            [self.searchVC.view addGestureRecognizer:self.panGesture];
+            self.burgerButton.userInteractionEnabled = true;
+        
+        }];
+    }];
+}
 
 
 
