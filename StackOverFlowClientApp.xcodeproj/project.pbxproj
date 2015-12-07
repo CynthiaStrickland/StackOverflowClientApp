@@ -15,6 +15,10 @@
 		3D7D71F31C15F7AE0090A82C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D71F11C15F7AE0090A82C /* LaunchScreen.storyboard */; };
 		3D7D71FE1C15F7AE0090A82C /* StackOverFlowClientAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D71FD1C15F7AE0090A82C /* StackOverFlowClientAppTests.m */; };
 		3D7D72091C15F7AE0090A82C /* StackOverFlowClientAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72081C15F7AE0090A82C /* StackOverFlowClientAppUITests.m */; };
+		3D7D721B1C15F85E0090A82C /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */; };
+		3D7D721E1C15F8710090A82C /* SearchQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D721D1C15F8710090A82C /* SearchQuestionsViewController.m */; };
+		3D7D72211C15F93B0090A82C /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72201C15F93B0090A82C /* MenuTableViewController.m */; };
+		3D7D72241C15F96F0090A82C /* MenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72231C15F96F0090A82C /* MenuContainerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		3D7D72041C15F7AE0090A82C /* StackOverFlowClientAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackOverFlowClientAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7D72081C15F7AE0090A82C /* StackOverFlowClientAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackOverFlowClientAppUITests.m; sourceTree = "<group>"; };
 		3D7D720A1C15F7AE0090A82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D7D72191C15F85E0090A82C /* MyQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsViewController.h; sourceTree = "<group>"; };
+		3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
+		3D7D721C1C15F8710090A82C /* SearchQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchQuestionsViewController.h; sourceTree = "<group>"; };
+		3D7D721D1C15F8710090A82C /* SearchQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchQuestionsViewController.m; sourceTree = "<group>"; };
+		3D7D721F1C15F93B0090A82C /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewController.h; path = ../MenuTableViewController.h; sourceTree = "<group>"; };
+		3D7D72201C15F93B0090A82C /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewController.m; path = ../MenuTableViewController.m; sourceTree = "<group>"; };
+		3D7D72221C15F96F0090A82C /* MenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuContainerViewController.h; sourceTree = "<group>"; };
+		3D7D72231C15F96F0090A82C /* MenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuContainerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +113,19 @@
 		3D7D71E21C15F7AE0090A82C /* StackOverFlowClientApp */ = {
 			isa = PBXGroup;
 			children = (
+				3D7D71EC1C15F7AE0090A82C /* Main.storyboard */,
 				3D7D71E61C15F7AE0090A82C /* AppDelegate.h */,
 				3D7D71E71C15F7AE0090A82C /* AppDelegate.m */,
+				3D7D72221C15F96F0090A82C /* MenuContainerViewController.h */,
+				3D7D72231C15F96F0090A82C /* MenuContainerViewController.m */,
+				3D7D721F1C15F93B0090A82C /* MenuTableViewController.h */,
+				3D7D72201C15F93B0090A82C /* MenuTableViewController.m */,
+				3D7D72191C15F85E0090A82C /* MyQuestionsViewController.h */,
+				3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */,
+				3D7D721C1C15F8710090A82C /* SearchQuestionsViewController.h */,
+				3D7D721D1C15F8710090A82C /* SearchQuestionsViewController.m */,
 				3D7D71E91C15F7AE0090A82C /* ViewController.h */,
 				3D7D71EA1C15F7AE0090A82C /* ViewController.m */,
-				3D7D71EC1C15F7AE0090A82C /* Main.storyboard */,
-				3D7D71EF1C15F7AE0090A82C /* Assets.xcassets */,
-				3D7D71F11C15F7AE0090A82C /* LaunchScreen.storyboard */,
-				3D7D71F41C15F7AE0090A82C /* Info.plist */,
 				3D7D71E31C15F7AE0090A82C /* Supporting Files */,
 			);
 			path = StackOverFlowClientApp;
@@ -117,6 +134,9 @@
 		3D7D71E31C15F7AE0090A82C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3D7D71F41C15F7AE0090A82C /* Info.plist */,
+				3D7D71F11C15F7AE0090A82C /* LaunchScreen.storyboard */,
+				3D7D71EF1C15F7AE0090A82C /* Assets.xcassets */,
 				3D7D71E41C15F7AE0090A82C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -270,9 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7D72241C15F96F0090A82C /* MenuContainerViewController.m in Sources */,
 				3D7D71EB1C15F7AE0090A82C /* ViewController.m in Sources */,
+				3D7D72211C15F93B0090A82C /* MenuTableViewController.m in Sources */,
 				3D7D71E81C15F7AE0090A82C /* AppDelegate.m in Sources */,
 				3D7D71E51C15F7AE0090A82C /* main.m in Sources */,
+				3D7D721E1C15F8710090A82C /* SearchQuestionsViewController.m in Sources */,
+				3D7D721B1C15F85E0090A82C /* MyQuestionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
