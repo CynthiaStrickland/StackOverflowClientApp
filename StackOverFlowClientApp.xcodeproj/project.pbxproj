@@ -125,11 +125,11 @@
 		3D7D71D71C15F7AE0090A82C = {
 			isa = PBXGroup;
 			children = (
-				3D7D72271C160DC50090A82C /* WebKit.framework */,
 				3D7D71E21C15F7AE0090A82C /* StackOverFlowClientApp */,
 				3D7D71FC1C15F7AE0090A82C /* StackOverFlowClientAppTests */,
 				3D7D72071C15F7AE0090A82C /* StackOverFlowClientAppUITests */,
 				3D7D71E11C15F7AE0090A82C /* Products */,
+				3D7D72271C160DC50090A82C /* WebKit.framework */,
 				3D7D72251C15FF010090A82C /* emptyStar.png */,
 				31CF8D78B2F306A331E7761A /* Pods */,
 				23F839E60D0DBFB83E60BF22 /* Frameworks */,
