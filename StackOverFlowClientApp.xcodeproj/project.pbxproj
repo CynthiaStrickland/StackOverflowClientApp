@@ -27,6 +27,7 @@
 		3D7D72361C175B9A0090A82C /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72351C175B9A0090A82C /* Question.m */; };
 		3D7D72391C175CE70090A82C /* JSONRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72381C175CE70090A82C /* JSONRequestService.m */; };
 		3D7D723C1C1762540090A82C /* SearchAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D723B1C1762540090A82C /* SearchAPIService.m */; };
+		3D7D72411C1793ED0090A82C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72401C1793ED0090A82C /* Constants.m */; };
 		5956946307CF2DB5952D1D10 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF5391749BD05C64A597744 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,8 @@
 		3D7D72381C175CE70090A82C /* JSONRequestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONRequestService.m; sourceTree = "<group>"; };
 		3D7D723A1C1762540090A82C /* SearchAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAPIService.h; sourceTree = "<group>"; };
 		3D7D723B1C1762540090A82C /* SearchAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAPIService.m; sourceTree = "<group>"; };
+		3D7D723F1C1793ED0090A82C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		3D7D72401C1793ED0090A82C /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		AB5BCFA80AEDD56A9469E382 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D429926BF981B13B3AD565A6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DEF5391749BD05C64A597744 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +169,8 @@
 				3D7D71E71C15F7AE0090A82C /* AppDelegate.m */,
 				3D7D723E1C17628D0090A82C /* CONTROLLERS */,
 				3D7D723D1C1762700090A82C /* MODELS */,
+				3D7D723F1C1793ED0090A82C /* Constants.h */,
+				3D7D72401C1793ED0090A82C /* Constants.m */,
 				3D7D72371C175CE70090A82C /* JSONRequestService.h */,
 				3D7D72381C175CE70090A82C /* JSONRequestService.m */,
 				3D7D723A1C1762540090A82C /* SearchAPIService.h */,
@@ -422,6 +427,7 @@
 				3D7D72301C165B930090A82C /* Error.m in Sources */,
 				3D7D72241C15F96F0090A82C /* MenuContainerViewController.m in Sources */,
 				3D7D722B1C1611C90090A82C /* OAuthWebViewController.m in Sources */,
+				3D7D72411C1793ED0090A82C /* Constants.m in Sources */,
 				3D7D72211C15F93B0090A82C /* MenuTableViewController.m in Sources */,
 				3D7D71E81C15F7AE0090A82C /* AppDelegate.m in Sources */,
 				3D7D71E51C15F7AE0090A82C /* main.m in Sources */,

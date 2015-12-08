@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
 
 @interface JSONRequestService : NSObject
 
-+ (void)getRequestWithURL:(NSString *)url parameters:(NSDictionary *)parameters withCompletion:()completion;
-
++ (void)getRequestWithURL:(NSString * _Nonnull)url parameters:(NSDictionary * _Nullable)parameters withCompletion:()completion;
 
 @end
