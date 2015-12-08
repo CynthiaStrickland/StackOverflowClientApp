@@ -88,7 +88,7 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.2;
 //MARK: Setup Menu Button
 -(void)setupBurgerButton{
     UIButton *burgerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kburgerButtonWidth, kburgerButtonHeight)];
-    [burgerButton setImage:[UIImage imageNamed:@"burger"] forState:UIControlStateNormal];
+    [burgerButton setImage:[UIImage imageNamed:@"emptyStar"] forState:UIControlStateNormal];
     [self.topViewController.view addSubview:burgerButton];
     [burgerButton addTarget:self action:@selector(burgerButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     self.burgerButton = burgerButton;

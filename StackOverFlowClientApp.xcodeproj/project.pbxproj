@@ -23,6 +23,10 @@
 		3D7D722B1C1611C90090A82C /* OAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */; };
 		3D7D722E1C165A7A0090A82C /* ErrorDomainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */; };
 		3D7D72301C165B930090A82C /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D722F1C165B930090A82C /* Error.m */; };
+		3D7D72331C1759F70090A82C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72321C1759F70090A82C /* User.m */; };
+		3D7D72361C175B9A0090A82C /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72351C175B9A0090A82C /* Question.m */; };
+		3D7D72391C175CE70090A82C /* JSONRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72381C175CE70090A82C /* JSONRequestService.m */; };
+		3D7D723C1C1762540090A82C /* SearchAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D723B1C1762540090A82C /* SearchAPIService.m */; };
 		5956946307CF2DB5952D1D10 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF5391749BD05C64A597744 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +77,14 @@
 		3D7D722C1C165A7A0090A82C /* ErrorDomainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorDomainViewController.h; sourceTree = "<group>"; };
 		3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorDomainViewController.m; sourceTree = "<group>"; };
 		3D7D722F1C165B930090A82C /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
+		3D7D72311C1759F70090A82C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		3D7D72321C1759F70090A82C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		3D7D72341C175B9A0090A82C /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		3D7D72351C175B9A0090A82C /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		3D7D72371C175CE70090A82C /* JSONRequestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRequestService.h; sourceTree = "<group>"; };
+		3D7D72381C175CE70090A82C /* JSONRequestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONRequestService.m; sourceTree = "<group>"; };
+		3D7D723A1C1762540090A82C /* SearchAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAPIService.h; sourceTree = "<group>"; };
+		3D7D723B1C1762540090A82C /* SearchAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAPIService.m; sourceTree = "<group>"; };
 		AB5BCFA80AEDD56A9469E382 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D429926BF981B13B3AD565A6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DEF5391749BD05C64A597744 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,19 +164,16 @@
 				3D7D71EC1C15F7AE0090A82C /* Main.storyboard */,
 				3D7D71E61C15F7AE0090A82C /* AppDelegate.h */,
 				3D7D71E71C15F7AE0090A82C /* AppDelegate.m */,
-				3D7D72291C1611C90090A82C /* OAuthWebViewController.h */,
-				3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */,
-				3D7D722C1C165A7A0090A82C /* ErrorDomainViewController.h */,
-				3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */,
-				3D7D722F1C165B930090A82C /* Error.m */,
-				3D7D721C1C15F8710090A82C /* MainContentViewController.h */,
-				3D7D721D1C15F8710090A82C /* MainContentViewController.m */,
-				3D7D72221C15F96F0090A82C /* MenuContainerViewController.h */,
-				3D7D72231C15F96F0090A82C /* MenuContainerViewController.m */,
-				3D7D721F1C15F93B0090A82C /* MenuTableViewController.h */,
-				3D7D72201C15F93B0090A82C /* MenuTableViewController.m */,
-				3D7D72191C15F85E0090A82C /* MyQuestionsViewController.h */,
-				3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */,
+				3D7D723E1C17628D0090A82C /* CONTROLLERS */,
+				3D7D723D1C1762700090A82C /* MODELS */,
+				3D7D72371C175CE70090A82C /* JSONRequestService.h */,
+				3D7D72381C175CE70090A82C /* JSONRequestService.m */,
+				3D7D723A1C1762540090A82C /* SearchAPIService.h */,
+				3D7D723B1C1762540090A82C /* SearchAPIService.m */,
+				3D7D72341C175B9A0090A82C /* Question.h */,
+				3D7D72351C175B9A0090A82C /* Question.m */,
+				3D7D72311C1759F70090A82C /* User.h */,
+				3D7D72321C1759F70090A82C /* User.m */,
 				3D7D71E31C15F7AE0090A82C /* Supporting Files */,
 			);
 			path = StackOverFlowClientApp;
@@ -197,6 +206,33 @@
 				3D7D720A1C15F7AE0090A82C /* Info.plist */,
 			);
 			path = StackOverFlowClientAppUITests;
+			sourceTree = "<group>";
+		};
+		3D7D723D1C1762700090A82C /* MODELS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MODELS;
+			sourceTree = "<group>";
+		};
+		3D7D723E1C17628D0090A82C /* CONTROLLERS */ = {
+			isa = PBXGroup;
+			children = (
+				3D7D72291C1611C90090A82C /* OAuthWebViewController.h */,
+				3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */,
+				3D7D722C1C165A7A0090A82C /* ErrorDomainViewController.h */,
+				3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */,
+				3D7D722F1C165B930090A82C /* Error.m */,
+				3D7D721C1C15F8710090A82C /* MainContentViewController.h */,
+				3D7D721D1C15F8710090A82C /* MainContentViewController.m */,
+				3D7D72221C15F96F0090A82C /* MenuContainerViewController.h */,
+				3D7D72231C15F96F0090A82C /* MenuContainerViewController.m */,
+				3D7D721F1C15F93B0090A82C /* MenuTableViewController.h */,
+				3D7D72201C15F93B0090A82C /* MenuTableViewController.m */,
+				3D7D72191C15F85E0090A82C /* MyQuestionsViewController.h */,
+				3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */,
+			);
+			name = CONTROLLERS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +417,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7D72331C1759F70090A82C /* User.m in Sources */,
+				3D7D723C1C1762540090A82C /* SearchAPIService.m in Sources */,
 				3D7D72301C165B930090A82C /* Error.m in Sources */,
 				3D7D72241C15F96F0090A82C /* MenuContainerViewController.m in Sources */,
 				3D7D722B1C1611C90090A82C /* OAuthWebViewController.m in Sources */,
@@ -388,8 +426,10 @@
 				3D7D71E81C15F7AE0090A82C /* AppDelegate.m in Sources */,
 				3D7D71E51C15F7AE0090A82C /* main.m in Sources */,
 				3D7D721E1C15F8710090A82C /* MainContentViewController.m in Sources */,
+				3D7D72361C175B9A0090A82C /* Question.m in Sources */,
 				3D7D721B1C15F85E0090A82C /* MyQuestionsViewController.m in Sources */,
 				3D7D722E1C165A7A0090A82C /* ErrorDomainViewController.m in Sources */,
+				3D7D72391C175CE70090A82C /* JSONRequestService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

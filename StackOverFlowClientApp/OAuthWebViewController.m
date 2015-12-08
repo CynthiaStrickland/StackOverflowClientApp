@@ -27,7 +27,7 @@ NSString const *kRedirectURI = @"https://stackexchange.com/oauth/login_success";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSError *stackOverflowError = [NSError errorWithDomain:kStackErrorCodes code: userInfo:nil];
+//    NSError *stackOverflowError = [NSError errorWithDomain:kStackErrorCodes code: userInfo:nil];
     
     self.webView = [[WKWebView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.webView];
