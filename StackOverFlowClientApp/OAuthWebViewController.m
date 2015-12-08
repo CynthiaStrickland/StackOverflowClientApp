@@ -6,6 +6,8 @@
 //  Copyright © 2015 Cynthia Whitlatch. All rights reserved.
 //
 
+#import "Error.m"
+#import "ErrorDomainViewController.h"
 #import "OAuthWebViewController.h"
 @import WebKit;
 
@@ -25,7 +27,7 @@ NSString const *kRedirectURI = @"https://stackexchange.com/oauth/login_success";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view.
+    NSError *stackOverflowError = [NSError errorWithDomain:kStackErrorCodes code: userInfo:nil];
     
     self.webView = [[WKWebView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.webView];

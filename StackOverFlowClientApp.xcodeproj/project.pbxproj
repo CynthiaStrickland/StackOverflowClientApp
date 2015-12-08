@@ -21,6 +21,8 @@
 		3D7D72261C15FF010090A82C /* emptyStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D72251C15FF010090A82C /* emptyStar.png */; };
 		3D7D72281C160DC50090A82C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7D72271C160DC50090A82C /* WebKit.framework */; };
 		3D7D722B1C1611C90090A82C /* OAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */; };
+		3D7D722E1C165A7A0090A82C /* ErrorDomainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */; };
+		3D7D72301C165B930090A82C /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D722F1C165B930090A82C /* Error.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,9 @@
 		3D7D72271C160DC50090A82C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3D7D72291C1611C90090A82C /* OAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthWebViewController.h; sourceTree = "<group>"; };
 		3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthWebViewController.m; sourceTree = "<group>"; };
+		3D7D722C1C165A7A0090A82C /* ErrorDomainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorDomainViewController.h; sourceTree = "<group>"; };
+		3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorDomainViewController.m; sourceTree = "<group>"; };
+		3D7D722F1C165B930090A82C /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +130,9 @@
 				3D7D71E71C15F7AE0090A82C /* AppDelegate.m */,
 				3D7D72291C1611C90090A82C /* OAuthWebViewController.h */,
 				3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */,
+				3D7D722C1C165A7A0090A82C /* ErrorDomainViewController.h */,
+				3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */,
+				3D7D722F1C165B930090A82C /* Error.m */,
 				3D7D721C1C15F8710090A82C /* MainContentViewController.h */,
 				3D7D721D1C15F8710090A82C /* MainContentViewController.m */,
 				3D7D72221C15F96F0090A82C /* MenuContainerViewController.h */,
@@ -298,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7D72301C165B930090A82C /* Error.m in Sources */,
 				3D7D72241C15F96F0090A82C /* MenuContainerViewController.m in Sources */,
 				3D7D722B1C1611C90090A82C /* OAuthWebViewController.m in Sources */,
 				3D7D72211C15F93B0090A82C /* MenuTableViewController.m in Sources */,
@@ -305,6 +314,7 @@
 				3D7D71E51C15F7AE0090A82C /* main.m in Sources */,
 				3D7D721E1C15F8710090A82C /* MainContentViewController.m in Sources */,
 				3D7D721B1C15F85E0090A82C /* MyQuestionsViewController.m in Sources */,
+				3D7D722E1C165A7A0090A82C /* ErrorDomainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
