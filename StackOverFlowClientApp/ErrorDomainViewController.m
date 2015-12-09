@@ -7,8 +7,7 @@
 //
 
 #import "ErrorDomainViewController.h"
-
-extern NSString * const kStackErrorCodes;
+#import "Error.h"
 
 typedef enum : NSUInteger {
     StackErrorGeneralError,

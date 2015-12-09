@@ -6,7 +6,6 @@
 //  Copyright © 2015 Cynthia Whitlatch. All rights reserved.
 //
 
-#import "Error.m"
 #import "ErrorDomainViewController.h"
 #import "OAuthWebViewController.h"
 @import WebKit;

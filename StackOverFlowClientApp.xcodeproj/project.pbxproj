@@ -22,7 +22,6 @@
 		3D7D72281C160DC50090A82C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7D72271C160DC50090A82C /* WebKit.framework */; };
 		3D7D722B1C1611C90090A82C /* OAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */; };
 		3D7D722E1C165A7A0090A82C /* ErrorDomainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */; };
-		3D7D72301C165B930090A82C /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D722F1C165B930090A82C /* Error.m */; };
 		3D7D72331C1759F70090A82C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72321C1759F70090A82C /* User.m */; };
 		3D7D72361C175B9A0090A82C /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72351C175B9A0090A82C /* Question.m */; };
 		3D7D72391C175CE70090A82C /* JSONRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72381C175CE70090A82C /* JSONRequestService.m */; };
@@ -78,7 +77,6 @@
 		3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthWebViewController.m; sourceTree = "<group>"; };
 		3D7D722C1C165A7A0090A82C /* ErrorDomainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorDomainViewController.h; sourceTree = "<group>"; };
 		3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorDomainViewController.m; sourceTree = "<group>"; };
-		3D7D722F1C165B930090A82C /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
 		3D7D72311C1759F70090A82C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		3D7D72321C1759F70090A82C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		3D7D72341C175B9A0090A82C /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
@@ -91,6 +89,7 @@
 		3D7D72981C18D3320090A82C /* MyQuestionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsTableViewCell.h; sourceTree = "<group>"; };
 		3D7D72991C18D3320090A82C /* MyQuestionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsTableViewCell.m; sourceTree = "<group>"; };
 		3D7D729B1C18D63A0090A82C /* MyQuestionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQuestionsTableViewCell.xib; sourceTree = "<group>"; };
+		3D7D729E1C18E2740090A82C /* Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Error.h; sourceTree = "<group>"; };
 		AB5BCFA80AEDD56A9469E382 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D429926BF981B13B3AD565A6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DEF5391749BD05C64A597744 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,11 +223,11 @@
 		3D7D723E1C17628D0090A82C /* CONTROLLERS */ = {
 			isa = PBXGroup;
 			children = (
+				3D7D729E1C18E2740090A82C /* Error.h */,
 				3D7D72291C1611C90090A82C /* OAuthWebViewController.h */,
 				3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */,
 				3D7D722C1C165A7A0090A82C /* ErrorDomainViewController.h */,
 				3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */,
-				3D7D722F1C165B930090A82C /* Error.m */,
 				3D7D721C1C15F8710090A82C /* MainContentViewController.h */,
 				3D7D721D1C15F8710090A82C /* MainContentViewController.m */,
 				3D7D72221C15F96F0090A82C /* MenuContainerViewController.h */,
@@ -440,7 +439,6 @@
 				3D7D72331C1759F70090A82C /* User.m in Sources */,
 				3D7D723C1C1762540090A82C /* SearchAPIService.m in Sources */,
 				3D7D729A1C18D3320090A82C /* MyQuestionsTableViewCell.m in Sources */,
-				3D7D72301C165B930090A82C /* Error.m in Sources */,
 				3D7D72241C15F96F0090A82C /* MenuContainerViewController.m in Sources */,
 				3D7D722B1C1611C90090A82C /* OAuthWebViewController.m in Sources */,
 				3D7D72211C15F93B0090A82C /* MenuTableViewController.m in Sources */,
