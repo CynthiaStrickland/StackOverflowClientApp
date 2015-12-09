@@ -8,9 +8,15 @@
 
 @import Foundation;
 @import UIKit;
+#import "User.h"
+#import "Constants.h"
 
-typedef void (^kNSDataCompletionHandler)(NSData * _Nullable data, NSError * _Nullable error);
-typedef void (^kNSArrayCompletionHandler)(NSData * _Nullable data, NSError * _Nullable error);
-typedef void (^kNSDictionaryCompletionHandler)(NSData * _Nullable data, NSError * _Nullable error);
-typedef void (^kNSImageCompletionHandler)(NSData * _Nullable data, NSError * _Nullable error);
+typedef void(^kNSDataCompletionHandler)(NSData *data, NSError *error);
+typedef void(^kNSArrayCompletionHandler)(NSArray *array, NSError *error);
+typedef void(^kNSDictionaryCompletionHandler)(NSDictionary *dictionary, NSError *error);
+typedef void(^kUIImageCompletionHandler)(UIImage *image, NSError *error);
+typedef void(^kIdCompletionHandler)(id responseObject, NSError *error);
+
+
+
 

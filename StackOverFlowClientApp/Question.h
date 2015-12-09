@@ -20,5 +20,10 @@
 @property UIImage *profileImage;
 @property NSInteger *viewCount;
 @property NSString *title;
+@property NSDate *creationDate;
+@property NSDate *lastActivityDate;
+@property NSInteger *score;
+@property NSInteger *answerCount;
 
 @end
+
