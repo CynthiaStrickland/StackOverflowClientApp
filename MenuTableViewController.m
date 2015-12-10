@@ -9,6 +9,8 @@
 #import "MenuTableViewController.h"
 
 @interface MenuTableViewController ()
+@property (weak, nonatomic) IBOutlet UITableViewCell *searchQuestionsLabel;
+@property (weak, nonatomic) IBOutlet UITableViewCell *myQuestionsLabel;
 
 @end
 

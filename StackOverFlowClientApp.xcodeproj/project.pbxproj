@@ -15,9 +15,8 @@
 		3D7D71FE1C15F7AE0090A82C /* StackOverFlowClientAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D71FD1C15F7AE0090A82C /* StackOverFlowClientAppTests.m */; };
 		3D7D72091C15F7AE0090A82C /* StackOverFlowClientAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72081C15F7AE0090A82C /* StackOverFlowClientAppUITests.m */; };
 		3D7D721B1C15F85E0090A82C /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */; };
-		3D7D721E1C15F8710090A82C /* MainContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D721D1C15F8710090A82C /* MainContentViewController.m */; };
 		3D7D72211C15F93B0090A82C /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72201C15F93B0090A82C /* MenuTableViewController.m */; };
-		3D7D72241C15F96F0090A82C /* MenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72231C15F96F0090A82C /* MenuContainerViewController.m */; };
+		3D7D72241C15F96F0090A82C /* BurgerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72231C15F96F0090A82C /* BurgerMenuViewController.m */; };
 		3D7D72261C15FF010090A82C /* emptyStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D72251C15FF010090A82C /* emptyStar.png */; };
 		3D7D72281C160DC50090A82C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7D72271C160DC50090A82C /* WebKit.framework */; };
 		3D7D722B1C1611C90090A82C /* OAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */; };
@@ -28,6 +27,8 @@
 		3D7D723C1C1762540090A82C /* SearchAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D723B1C1762540090A82C /* SearchAPIService.m */; };
 		3D7D729A1C18D3320090A82C /* MyQuestionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72991C18D3320090A82C /* MyQuestionsTableViewCell.m */; };
 		3D7D729C1C18D63A0090A82C /* MyQuestionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D729B1C18D63A0090A82C /* MyQuestionsTableViewCell.xib */; };
+		3D7D72A31C18E9BB0090A82C /* MainContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72A21C18E9BB0090A82C /* MainContentViewController.m */; };
+		3D7D72A61C18EDA80090A82C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72A51C18EDA80090A82C /* SearchViewController.m */; };
 		5956946307CF2DB5952D1D10 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF5391749BD05C64A597744 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -65,12 +66,10 @@
 		3D7D720A1C15F7AE0090A82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D7D72191C15F85E0090A82C /* MyQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsViewController.h; sourceTree = "<group>"; };
 		3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
-		3D7D721C1C15F8710090A82C /* MainContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainContentViewController.h; sourceTree = "<group>"; };
-		3D7D721D1C15F8710090A82C /* MainContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainContentViewController.m; sourceTree = "<group>"; };
 		3D7D721F1C15F93B0090A82C /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewController.h; path = ../MenuTableViewController.h; sourceTree = "<group>"; };
 		3D7D72201C15F93B0090A82C /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewController.m; path = ../MenuTableViewController.m; sourceTree = "<group>"; };
-		3D7D72221C15F96F0090A82C /* MenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuContainerViewController.h; sourceTree = "<group>"; };
-		3D7D72231C15F96F0090A82C /* MenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuContainerViewController.m; sourceTree = "<group>"; };
+		3D7D72221C15F96F0090A82C /* BurgerMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurgerMenuViewController.h; sourceTree = "<group>"; };
+		3D7D72231C15F96F0090A82C /* BurgerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurgerMenuViewController.m; sourceTree = "<group>"; };
 		3D7D72251C15FF010090A82C /* emptyStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyStar.png; sourceTree = "<group>"; };
 		3D7D72271C160DC50090A82C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3D7D72291C1611C90090A82C /* OAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthWebViewController.h; sourceTree = "<group>"; };
@@ -90,6 +89,10 @@
 		3D7D72991C18D3320090A82C /* MyQuestionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsTableViewCell.m; sourceTree = "<group>"; };
 		3D7D729B1C18D63A0090A82C /* MyQuestionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQuestionsTableViewCell.xib; sourceTree = "<group>"; };
 		3D7D729E1C18E2740090A82C /* Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Error.h; sourceTree = "<group>"; };
+		3D7D72A11C18E9BB0090A82C /* MainContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainContentViewController.h; sourceTree = "<group>"; };
+		3D7D72A21C18E9BB0090A82C /* MainContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainContentViewController.m; sourceTree = "<group>"; };
+		3D7D72A41C18EDA80090A82C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		3D7D72A51C18EDA80090A82C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		AB5BCFA80AEDD56A9469E382 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D429926BF981B13B3AD565A6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DEF5391749BD05C64A597744 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,20 +227,22 @@
 			isa = PBXGroup;
 			children = (
 				3D7D729E1C18E2740090A82C /* Error.h */,
-				3D7D72291C1611C90090A82C /* OAuthWebViewController.h */,
-				3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */,
-				3D7D722C1C165A7A0090A82C /* ErrorDomainViewController.h */,
-				3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */,
-				3D7D721C1C15F8710090A82C /* MainContentViewController.h */,
-				3D7D721D1C15F8710090A82C /* MainContentViewController.m */,
-				3D7D72221C15F96F0090A82C /* MenuContainerViewController.h */,
-				3D7D72231C15F96F0090A82C /* MenuContainerViewController.m */,
+				3D7D72221C15F96F0090A82C /* BurgerMenuViewController.h */,
+				3D7D72231C15F96F0090A82C /* BurgerMenuViewController.m */,
 				3D7D721F1C15F93B0090A82C /* MenuTableViewController.h */,
 				3D7D72201C15F93B0090A82C /* MenuTableViewController.m */,
 				3D7D72191C15F85E0090A82C /* MyQuestionsViewController.h */,
 				3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */,
 				3D7D72981C18D3320090A82C /* MyQuestionsTableViewCell.h */,
 				3D7D72991C18D3320090A82C /* MyQuestionsTableViewCell.m */,
+				3D7D72A41C18EDA80090A82C /* SearchViewController.h */,
+				3D7D72A51C18EDA80090A82C /* SearchViewController.m */,
+				3D7D72291C1611C90090A82C /* OAuthWebViewController.h */,
+				3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */,
+				3D7D722C1C165A7A0090A82C /* ErrorDomainViewController.h */,
+				3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */,
+				3D7D72A11C18E9BB0090A82C /* MainContentViewController.h */,
+				3D7D72A21C18E9BB0090A82C /* MainContentViewController.m */,
 			);
 			name = CONTROLLERS;
 			sourceTree = "<group>";
@@ -439,12 +444,13 @@
 				3D7D72331C1759F70090A82C /* User.m in Sources */,
 				3D7D723C1C1762540090A82C /* SearchAPIService.m in Sources */,
 				3D7D729A1C18D3320090A82C /* MyQuestionsTableViewCell.m in Sources */,
-				3D7D72241C15F96F0090A82C /* MenuContainerViewController.m in Sources */,
+				3D7D72A31C18E9BB0090A82C /* MainContentViewController.m in Sources */,
+				3D7D72241C15F96F0090A82C /* BurgerMenuViewController.m in Sources */,
 				3D7D722B1C1611C90090A82C /* OAuthWebViewController.m in Sources */,
+				3D7D72A61C18EDA80090A82C /* SearchViewController.m in Sources */,
 				3D7D72211C15F93B0090A82C /* MenuTableViewController.m in Sources */,
 				3D7D71E81C15F7AE0090A82C /* AppDelegate.m in Sources */,
 				3D7D71E51C15F7AE0090A82C /* main.m in Sources */,
-				3D7D721E1C15F8710090A82C /* MainContentViewController.m in Sources */,
 				3D7D72361C175B9A0090A82C /* Question.m in Sources */,
 				3D7D721B1C15F85E0090A82C /* MyQuestionsViewController.m in Sources */,
 				3D7D722E1C165A7A0090A82C /* ErrorDomainViewController.m in Sources */,

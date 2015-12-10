@@ -1,24 +1,24 @@
 //
-//  MenuContainerViewController.m
+//  BurgerMenuViewController.m
 //  StackOverFlowClientApp
 //
 //  Created by Cynthia Whitlatch on 12/7/15.
 //  Copyright © 2015 Cynthia Whitlatch. All rights reserved.
 //
 
-#import "MenuContainerViewController.h"
+#import "BurgerMenuViewController.h"
 #import "MenuTableViewController.h"
 #import "MainContentViewController.h"
 #import "MyQuestionsViewController.h"
+#import "SearchViewController.h"
 
 CGFloat const kburgerOpenScreenDivider = 3.0;
 CGFloat const kburgerOpenScreenMultiplier = 2.0;
 CGFloat const kburgerButtonWidth = 50.0;
 CGFloat const kburgerButtonHeight = 50.0;
-
 NSTimeInterval const ktimeToSlideMenuOpen = 0.2;
 
-@interface MenuContainerViewController ()<UITableViewDelegate>
+@interface BurgerMenuViewController ()<UITableViewDelegate>
 
 @property (strong,nonatomic) MenuTableViewController *leftMenuViewController;
 @property (strong,nonatomic) MainContentViewController *topViewController;
@@ -31,7 +31,7 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.2;
 
 
 
-@implementation MenuContainerViewController
+@implementation BurgerMenuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -79,13 +79,11 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.2;
 }
 
 -(void)setupAdditonalMenuViewControllers{
-    
     MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestionsVC"];
     self.myQuestionsViewController = myQuestionsVC;
     
 }
 
-//MARK: Setup Menu Button
 -(void)setupBurgerButton{
     UIButton *burgerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kburgerButtonWidth, kburgerButtonHeight)];
     [burgerButton setImage:[UIImage imageNamed:@"emptyStar"] forState:UIControlStateNormal];
@@ -94,16 +92,6 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.2;
     self.burgerButton = burgerButton;
 }
 
-
-//MARK: Pan Gesture Setup
--(void)setupPanGesture{
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(topViewControllerPanned:)];
-    [self.topViewController.view addGestureRecognizer:pan];
-    self.panGesture = pan;
-}
-
-
-//MARK: Menu Button Pressed
 -(void)burgerButtonPressed:(UIButton *)sender {
     [UIView animateWithDuration:ktimeToSlideMenuOpen animations:^{
         self.topViewController.view.center = CGPointMake(self.view.center.x * kburgerOpenScreenMultiplier, self.topViewController.view.center.y);
@@ -114,6 +102,12 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.2;
         sender.userInteractionEnabled = false;
         
     }];
+}
+
+-(void)setupPanGesture{
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(topViewControllerPanned:)];
+    [self.topViewController.view addGestureRecognizer:pan];
+    self.panGesture = pan;
 }
 
 -(void)tapToCloseMenu:(UITapGestureRecognizer *)tap {
@@ -127,10 +121,7 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.2;
     }];
 }
 
-
-//MARK: View Controller Transitions
--(void)topViewControllerPanned:(UIPanGestureRecognizer *)sender {
-    
+-(void)topViewControllerPanned:(UIPanGestureRecognizer *)sender {    
     CGPoint velocity = [sender velocityInView:self.topViewController.view];
     CGPoint translation = [sender translationInView:self.topViewController.view];
     
