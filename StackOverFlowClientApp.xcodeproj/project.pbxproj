@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D3F6EF91C1A1B41003E11BF /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F6EF81C1A1B41003E11BF /* SearchTableViewCell.m */; };
+		3D3F6EFC1C1A1B67003E11BF /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F6EFB1C1A1B67003E11BF /* ProfileViewController.m */; };
 		3D7D71E51C15F7AE0090A82C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D71E41C15F7AE0090A82C /* main.m */; };
 		3D7D71E81C15F7AE0090A82C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D71E71C15F7AE0090A82C /* AppDelegate.m */; };
 		3D7D71EE1C15F7AE0090A82C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D71EC1C15F7AE0090A82C /* Main.storyboard */; };
@@ -50,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D3F6EF71C1A1B41003E11BF /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
+		3D3F6EF81C1A1B41003E11BF /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
+		3D3F6EFA1C1A1B67003E11BF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		3D3F6EFB1C1A1B67003E11BF /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		3D7D71E01C15F7AE0090A82C /* StackOverFlowClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverFlowClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7D71E41C15F7AE0090A82C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D7D71E61C15F7AE0090A82C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -226,7 +232,6 @@
 		3D7D723E1C17628D0090A82C /* CONTROLLERS */ = {
 			isa = PBXGroup;
 			children = (
-				3D7D729E1C18E2740090A82C /* Error.h */,
 				3D7D72221C15F96F0090A82C /* BurgerMenuViewController.h */,
 				3D7D72231C15F96F0090A82C /* BurgerMenuViewController.m */,
 				3D7D721F1C15F93B0090A82C /* MenuTableViewController.h */,
@@ -235,10 +240,15 @@
 				3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */,
 				3D7D72981C18D3320090A82C /* MyQuestionsTableViewCell.h */,
 				3D7D72991C18D3320090A82C /* MyQuestionsTableViewCell.m */,
+				3D3F6EF71C1A1B41003E11BF /* SearchTableViewCell.h */,
+				3D3F6EF81C1A1B41003E11BF /* SearchTableViewCell.m */,
+				3D3F6EFA1C1A1B67003E11BF /* ProfileViewController.h */,
+				3D3F6EFB1C1A1B67003E11BF /* ProfileViewController.m */,
 				3D7D72A41C18EDA80090A82C /* SearchViewController.h */,
 				3D7D72A51C18EDA80090A82C /* SearchViewController.m */,
 				3D7D72291C1611C90090A82C /* OAuthWebViewController.h */,
 				3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */,
+				3D7D729E1C18E2740090A82C /* Error.h */,
 				3D7D722C1C165A7A0090A82C /* ErrorDomainViewController.h */,
 				3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */,
 				3D7D72A11C18E9BB0090A82C /* MainContentViewController.h */,
@@ -443,6 +453,7 @@
 			files = (
 				3D7D72331C1759F70090A82C /* User.m in Sources */,
 				3D7D723C1C1762540090A82C /* SearchAPIService.m in Sources */,
+				3D3F6EFC1C1A1B67003E11BF /* ProfileViewController.m in Sources */,
 				3D7D729A1C18D3320090A82C /* MyQuestionsTableViewCell.m in Sources */,
 				3D7D72A31C18E9BB0090A82C /* MainContentViewController.m in Sources */,
 				3D7D72241C15F96F0090A82C /* BurgerMenuViewController.m in Sources */,
@@ -455,6 +466,7 @@
 				3D7D721B1C15F85E0090A82C /* MyQuestionsViewController.m in Sources */,
 				3D7D722E1C165A7A0090A82C /* ErrorDomainViewController.m in Sources */,
 				3D7D72391C175CE70090A82C /* JSONRequestService.m in Sources */,
+				3D3F6EF91C1A1B41003E11BF /* SearchTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
