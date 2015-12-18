@@ -1,5 +1,5 @@
 //
-//  SearchQuestionsViewController.h
+//  ErrorDomainViewController.h
 //  StackOverFlowClientApp
 //
 //  Created by Cynthia Whitlatch on 12/7/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchQuestionsViewController : UIViewController
+@interface ErrorDomainViewController : UIViewController
 
 @end
