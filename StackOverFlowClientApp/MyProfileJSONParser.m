@@ -9,6 +9,7 @@
 #import "MyProfileJSONParser.h"
 #import "Error.h"
 #import "User.h"
+#import "Question.h"
 
 @implementation MyProfileJSONParser
 
@@ -22,7 +23,7 @@
             NSString *profileImageURLString = userInfo[@"profile_image"];
             NSURL *profileImageURL = [NSURL URLWithString:profileImageURLString];
             
-            User *user = [[User alloc]initWithDisplayName:displayName link:nil userID:userID reputation:nil profileImageURL:profileImageURL profileImage:nil viewCount:nil title:nil];
+            User *user = [[User alloc]initWithName:displayName link:nil userID:userID reputation:nil profileImageURL:profileImageURL profileImage:nil viewCount:nil title:nil userType:userInfo];
             
             if (user) {
                 completion(user, nil);

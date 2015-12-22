@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Question.h"
 
 @interface SearchTableViewCell : UITableViewCell
+
+@property(strong, nonatomic) Question *question;
 
 @end

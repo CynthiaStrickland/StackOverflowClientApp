@@ -9,17 +9,18 @@
 
 #import "MyProfileViewController.h"
 #import "MyProfileService.h"
-#import "MyProfileJSONParser.h"
-#import "ImageFetchService.h"
 #import "Error.h"
 #import "User.h"
+#import "MyProfileJSONParser.h"
+#import "ImageFetchService.h"
+
 
 @interface MyProfileViewController ()
 
 @property (strong, nonatomic) User *User;
-@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *reputationLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *displayNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *userIDLabel;
 
 @end
 
@@ -42,44 +43,8 @@
     }];
 }
 
-- (void)setUser:(User *)User {
-    User = User;
-    self.nameLabel.text = User.displayName;
-    self.reputationLabel.text = [NSString stringWithFormat:@"Reputation: %i", User.reputation];
-    [self downloadProfileImage:User];
-}
-
-//- (void)loadUser {
-//    [StackOverflowMyUserProfileAPIService fetchMyProfileInfoWithCompletion:^(NSDictionary *dictionary, NSError *error) {
-//        if (error) {
-//            NSLog(@"%@", error.localizedDescription);
-//            return;
-//        }
-//        if (dictionary) {
-//            [StackOverflowJSONParseMyUserService parseMyUserFromDictionary:dictionary completion:^(MyUser *myUser, NSError *error) {
-//                if (error) {
-//                    NSLog(@"%@", error.localizedDescription);
-//                    return;
-//                }
-//                if (myUser) {
-//                    [self setMyUser:myUser];
-//                }
-//            }];
-//        }
-//    }];
-//}
-
-- (void)downloadProfileImage:(User *)User {
-    dispatch_queue_t imageQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
-    dispatch_async(imageQueue, ^{
-        NSData *imageData = [NSData dataWithContentsOfURL:User.profileImageURL];
-        UIImage *profileImage = [UIImage imageWithData:imageData];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.User.profileImage = profileImage;
-            self.profileImageView.image = profileImage;
-        });
-    });
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 @end

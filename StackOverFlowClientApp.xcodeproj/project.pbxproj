@@ -13,6 +13,9 @@
 		3D375AA11C29E61E00FF331C /* MyProfileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375AA01C29E61E00FF331C /* MyProfileService.m */; };
 		3D375AA41C29E6AA00FF331C /* MyProfileJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375AA31C29E6AA00FF331C /* MyProfileJSONParser.m */; };
 		3D375AA71C29E8CF00FF331C /* MyQuestionsJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375AA61C29E8CF00FF331C /* MyQuestionsJSONParser.m */; };
+		3D375AAA1C29EBAB00FF331C /* MyQuestionsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375AA91C29EBAB00FF331C /* MyQuestionsService.m */; };
+		3D375AAC1C29EE8300FF331C /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D375AAB1C29EE8300FF331C /* SearchTableViewCell.xib */; };
+		3D375AAF1C2A0FFB00FF331C /* SearchJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375AAE1C2A0FFB00FF331C /* SearchJSONParser.m */; };
 		3D3F6EF91C1A1B41003E11BF /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F6EF81C1A1B41003E11BF /* SearchTableViewCell.m */; };
 		3D3F6EFC1C1A1B67003E11BF /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F6EFB1C1A1B67003E11BF /* MyProfileViewController.m */; };
 		3D7D71E51C15F7AE0090A82C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D71E41C15F7AE0090A82C /* main.m */; };
@@ -33,7 +36,6 @@
 		3D7D72361C175B9A0090A82C /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72351C175B9A0090A82C /* Question.m */; };
 		3D7D72391C175CE70090A82C /* JSONRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72381C175CE70090A82C /* JSONRequestService.m */; };
 		3D7D723C1C1762540090A82C /* SearchAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D723B1C1762540090A82C /* SearchAPIService.m */; };
-		3D7D729A1C18D3320090A82C /* MyQuestionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72991C18D3320090A82C /* MyQuestionsTableViewCell.m */; };
 		3D7D729C1C18D63A0090A82C /* MyQuestionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D729B1C18D63A0090A82C /* MyQuestionsTableViewCell.xib */; };
 		3D7D72A31C18E9BB0090A82C /* MainContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72A21C18E9BB0090A82C /* MainContentViewController.m */; };
 		3D7D72A61C18EDA80090A82C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72A51C18EDA80090A82C /* SearchViewController.m */; };
@@ -69,6 +71,11 @@
 		3D375AA31C29E6AA00FF331C /* MyProfileJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileJSONParser.m; sourceTree = "<group>"; };
 		3D375AA51C29E8CF00FF331C /* MyQuestionsJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsJSONParser.h; sourceTree = "<group>"; };
 		3D375AA61C29E8CF00FF331C /* MyQuestionsJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsJSONParser.m; sourceTree = "<group>"; };
+		3D375AA81C29EBAB00FF331C /* MyQuestionsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsService.h; sourceTree = "<group>"; };
+		3D375AA91C29EBAB00FF331C /* MyQuestionsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsService.m; sourceTree = "<group>"; };
+		3D375AAB1C29EE8300FF331C /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		3D375AAD1C2A0FFB00FF331C /* SearchJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchJSONParser.h; sourceTree = "<group>"; };
+		3D375AAE1C2A0FFB00FF331C /* SearchJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchJSONParser.m; sourceTree = "<group>"; };
 		3D3F6EF71C1A1B41003E11BF /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
 		3D3F6EF81C1A1B41003E11BF /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
 		3D3F6EFA1C1A1B67003E11BF /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
@@ -108,8 +115,6 @@
 		3D7D723A1C1762540090A82C /* SearchAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAPIService.h; sourceTree = "<group>"; };
 		3D7D723B1C1762540090A82C /* SearchAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAPIService.m; sourceTree = "<group>"; };
 		3D7D723F1C1793ED0090A82C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		3D7D72981C18D3320090A82C /* MyQuestionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsTableViewCell.h; sourceTree = "<group>"; };
-		3D7D72991C18D3320090A82C /* MyQuestionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsTableViewCell.m; sourceTree = "<group>"; };
 		3D7D729B1C18D63A0090A82C /* MyQuestionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQuestionsTableViewCell.xib; sourceTree = "<group>"; };
 		3D7D729E1C18E2740090A82C /* Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Error.h; sourceTree = "<group>"; };
 		3D7D72A11C18E9BB0090A82C /* MainContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainContentViewController.h; sourceTree = "<group>"; };
@@ -198,12 +203,18 @@
 				3D7D723E1C17628D0090A82C /* CONTROLLERS */,
 				3D7D723D1C1762700090A82C /* MODELS */,
 				3D7D723F1C1793ED0090A82C /* Constants.h */,
+				3D3F6EF71C1A1B41003E11BF /* SearchTableViewCell.h */,
+				3D3F6EF81C1A1B41003E11BF /* SearchTableViewCell.m */,
 				3D7D72371C175CE70090A82C /* JSONRequestService.h */,
 				3D7D72381C175CE70090A82C /* JSONRequestService.m */,
+				3D375AAD1C2A0FFB00FF331C /* SearchJSONParser.h */,
+				3D375AAE1C2A0FFB00FF331C /* SearchJSONParser.m */,
 				3D375A9F1C29E61E00FF331C /* MyProfileService.h */,
 				3D375AA01C29E61E00FF331C /* MyProfileService.m */,
 				3D375AA21C29E6AA00FF331C /* MyProfileJSONParser.h */,
 				3D375AA31C29E6AA00FF331C /* MyProfileJSONParser.m */,
+				3D375AA81C29EBAB00FF331C /* MyQuestionsService.h */,
+				3D375AA91C29EBAB00FF331C /* MyQuestionsService.m */,
 				3D375AA51C29E8CF00FF331C /* MyQuestionsJSONParser.h */,
 				3D375AA61C29E8CF00FF331C /* MyQuestionsJSONParser.m */,
 				3D375A971C29E0C300FF331C /* KeychainService.h */,
@@ -267,20 +278,16 @@
 				3D7D72201C15F93B0090A82C /* MenuTableViewController.m */,
 				3D7D72191C15F85E0090A82C /* MyQuestionsViewController.h */,
 				3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */,
-				3D7D72981C18D3320090A82C /* MyQuestionsTableViewCell.h */,
-				3D7D72991C18D3320090A82C /* MyQuestionsTableViewCell.m */,
-				3D3F6EF71C1A1B41003E11BF /* SearchTableViewCell.h */,
-				3D3F6EF81C1A1B41003E11BF /* SearchTableViewCell.m */,
 				3D3F6EFA1C1A1B67003E11BF /* MyProfileViewController.h */,
 				3D3F6EFB1C1A1B67003E11BF /* MyProfileViewController.m */,
 				3D7D72A41C18EDA80090A82C /* SearchViewController.h */,
 				3D7D72A51C18EDA80090A82C /* SearchViewController.m */,
-				3D7D72291C1611C90090A82C /* OAuthWebViewController.h */,
-				3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */,
 				3D7D722C1C165A7A0090A82C /* ErrorDomainViewController.h */,
 				3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */,
 				3D7D72A11C18E9BB0090A82C /* MainContentViewController.h */,
 				3D7D72A21C18E9BB0090A82C /* MainContentViewController.m */,
+				3D7D72291C1611C90090A82C /* OAuthWebViewController.h */,
+				3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */,
 			);
 			name = CONTROLLERS;
 			sourceTree = "<group>";
@@ -290,6 +297,7 @@
 			children = (
 				3D7D71EC1C15F7AE0090A82C /* Main.storyboard */,
 				3D7D71F11C15F7AE0090A82C /* LaunchScreen.storyboard */,
+				3D375AAB1C29EE8300FF331C /* SearchTableViewCell.xib */,
 				3D7D729B1C18D63A0090A82C /* MyQuestionsTableViewCell.xib */,
 			);
 			name = VIEWS;
@@ -407,6 +415,7 @@
 				3D7D72261C15FF010090A82C /* emptyStar.png in Resources */,
 				3D7D71F01C15F7AE0090A82C /* Assets.xcassets in Resources */,
 				3D7D71EE1C15F7AE0090A82C /* Main.storyboard in Resources */,
+				3D375AAC1C29EE8300FF331C /* SearchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,10 +490,11 @@
 			files = (
 				3D375A9B1C29E4E000FF331C /* Error.m in Sources */,
 				3D7D72331C1759F70090A82C /* User.m in Sources */,
+				3D375AAF1C2A0FFB00FF331C /* SearchJSONParser.m in Sources */,
+				3D375AAA1C29EBAB00FF331C /* MyQuestionsService.m in Sources */,
 				3D375A991C29E0CD00FF331C /* KeychainService.m in Sources */,
 				3D7D723C1C1762540090A82C /* SearchAPIService.m in Sources */,
 				3D3F6EFC1C1A1B67003E11BF /* MyProfileViewController.m in Sources */,
-				3D7D729A1C18D3320090A82C /* MyQuestionsTableViewCell.m in Sources */,
 				3D7D72A31C18E9BB0090A82C /* MainContentViewController.m in Sources */,
 				3D7D72241C15F96F0090A82C /* BurgerMenuViewController.m in Sources */,
 				3D7D722B1C1611C90090A82C /* OAuthWebViewController.m in Sources */,

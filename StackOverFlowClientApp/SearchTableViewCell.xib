@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="66" id="bjp-Xs-r50" customClass="SearchTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bjp-Xs-r50" id="QNE-Xi-Kpd">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EQT-I2-rMm">
+                        <rect key="frame" x="8" y="8" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="nVI-ay-Zoe"/>
+                            <constraint firstAttribute="width" constant="50" id="vgp-Ss-Y1r"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rip-J8-YXX">
+                        <rect key="frame" x="279" y="42" width="33" height="15"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vet-T8-sfQ">
+                        <rect key="frame" x="66" y="8" width="246" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="rip-J8-YXX" secondAttribute="bottom" constant="8" id="1zj-js-23C"/>
+                    <constraint firstItem="vet-T8-sfQ" firstAttribute="leading" secondItem="EQT-I2-rMm" secondAttribute="trailing" constant="8" id="55I-d9-bhl"/>
+                    <constraint firstItem="vet-T8-sfQ" firstAttribute="top" secondItem="QNE-Xi-Kpd" secondAttribute="top" constant="8" id="B2V-nP-XcF"/>
+                    <constraint firstItem="rip-J8-YXX" firstAttribute="leading" secondItem="EQT-I2-rMm" secondAttribute="trailing" constant="8" id="Mk9-jH-YL3"/>
+                    <constraint firstItem="vet-T8-sfQ" firstAttribute="centerY" secondItem="QNE-Xi-Kpd" secondAttribute="centerY" id="Tes-wn-9lT"/>
+                    <constraint firstAttribute="trailing" secondItem="rip-J8-YXX" secondAttribute="trailing" constant="8" id="Z7d-UG-2XZ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="vet-T8-sfQ" secondAttribute="trailing" id="c5n-0b-nba"/>
+                    <constraint firstItem="EQT-I2-rMm" firstAttribute="leading" secondItem="QNE-Xi-Kpd" secondAttribute="leadingMargin" id="dMF-YW-XpW"/>
+                    <constraint firstItem="rip-J8-YXX" firstAttribute="top" secondItem="QNE-Xi-Kpd" secondAttribute="top" constant="4" id="hCU-FE-4Oh"/>
+                    <constraint firstItem="EQT-I2-rMm" firstAttribute="centerY" secondItem="QNE-Xi-Kpd" secondAttribute="centerY" id="kDG-5k-dFs"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Tes-wn-9lT"/>
+                        <exclude reference="Mk9-jH-YL3"/>
+                        <exclude reference="hCU-FE-4Oh"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="ownerNameLabel" destination="rip-J8-YXX" id="T3n-6L-JKA"/>
+                <outlet property="profileImage" destination="EQT-I2-rMm" id="zp8-AH-lXe"/>
+                <outlet property="questionTitleLabel" destination="vet-T8-sfQ" id="jN8-cJ-bwc"/>
+            </connections>
+            <point key="canvasLocation" x="590" y="313"/>
+        </tableViewCell>
+    </objects>
+</document>

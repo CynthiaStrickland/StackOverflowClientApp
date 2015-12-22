@@ -11,7 +11,7 @@
 
 @interface User : NSObject
 
--(id)initWithDisplayName:(NSString*)displayName link:(NSURL *)link userID:(NSInteger *)userID reputation:(NSInteger *)reputation profileImageURL:(NSURL *)profileImageURL profileImage:(UIImage *)profileImage viewCount:(NSInteger *)viewCount title:(NSString *)title; 
+-(id)initWithName:(NSString*)displayName link:(NSURL *)link userID:(NSInteger *)userID reputation:(NSInteger *)reputation profileImageURL:(NSURL *)profileImageURL profileImage:(UIImage *)profileImage viewCount:(NSInteger *)viewCount title:(NSString *)title userType:(NSString *)userType;
 
 @property NSString *displayName;
 @property NSURL *link;
@@ -21,5 +21,6 @@
 @property UIImage *profileImage;
 @property NSInteger *viewCount;
 @property NSString *title;
+@property NSString *userType;
 
 @end

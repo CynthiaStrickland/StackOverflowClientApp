@@ -10,9 +10,8 @@
 
 @implementation User
 
--(id)initWithDisplayName:(NSString*)displayName link:(NSURL *)link userID:(NSInteger *)userID reputation:(NSInteger *)reputation profileImageURL:(NSURL *)profileImageURL profileImage:(UIImage *)profileImage viewCount:(NSInteger *)viewCount title:(NSString *)title {
- 
-    
+-(id)initWithName:(NSString*)displayName link:(NSURL *)link userID:(NSInteger *)userID reputation:(NSInteger *)reputation profileImageURL:(NSURL *)profileImageURL profileImage:(UIImage *)profileImage viewCount:(NSInteger *)viewCount title:(NSString *)title userType:(NSString*)userType {
+     
     if (self = [super init]) {
         
         [self setDisplayName:displayName];
@@ -23,6 +22,7 @@
         [self setProfileImage:profileImage];
         [self setViewCount:viewCount];
         [self setTitle:title];
+        [self setUserType:userType];
     }
     return self;
 }

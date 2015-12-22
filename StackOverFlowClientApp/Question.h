@@ -12,7 +12,7 @@
 
 @interface Question : NSObject
 
--(id)initWithDisplayName:(NSString*)displayName link:(NSURL *)link userID:(NSInteger *)userID reputation:(NSInteger *)reputation profileImageURL:(NSURL *)profileImageURL profileImage:(UIImage *)profileImage viewCount:(NSInteger *)viewCount title:(NSString *)title creationDate:(NSDate *)creationDate lastActivityDate:(NSDate *)lastActivityDate score:(NSInteger *)score answerCount:(NSInteger *)answerCount owner:(User*)owner;
+-(id)initWithTitle:(NSString *)title owner:(User *)owner;
 
 @property NSString *displayName;
 @property NSURL *link;
