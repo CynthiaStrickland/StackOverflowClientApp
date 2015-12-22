@@ -54,7 +54,7 @@
 /* Begin PBXFileReference section */
 		3D3F6EF71C1A1B41003E11BF /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
 		3D3F6EF81C1A1B41003E11BF /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
-		3D3F6EFA1C1A1B67003E11BF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		3D3F6EFA1C1A1B67003E11BF /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
 		3D3F6EFB1C1A1B67003E11BF /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		3D7D71E01C15F7AE0090A82C /* StackOverFlowClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverFlowClientApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7D71E41C15F7AE0090A82C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -242,7 +242,7 @@
 				3D7D72991C18D3320090A82C /* MyQuestionsTableViewCell.m */,
 				3D3F6EF71C1A1B41003E11BF /* SearchTableViewCell.h */,
 				3D3F6EF81C1A1B41003E11BF /* SearchTableViewCell.m */,
-				3D3F6EFA1C1A1B67003E11BF /* ProfileViewController.h */,
+				3D3F6EFA1C1A1B67003E11BF /* MyProfileViewController.h */,
 				3D3F6EFB1C1A1B67003E11BF /* ProfileViewController.m */,
 				3D7D72A41C18EDA80090A82C /* SearchViewController.h */,
 				3D7D72A51C18EDA80090A82C /* SearchViewController.m */,

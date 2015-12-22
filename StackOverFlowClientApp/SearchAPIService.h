@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Constants.h"
 
 @interface SearchAPIService : NSObject
+
++ (void)searchQuestionsWithTerm:(NSString *)searchTerm page:(int)page completion:(kIdCompletionHandler)completion;
 
 @end

@@ -23,7 +23,7 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.2;
 @property (strong,nonatomic) MenuTableViewController *menuTableViewController;
 @property (strong,nonatomic) MainContentViewController *topViewController;
 @property (strong, nonatomic) MyQuestionsViewController *myQuestionsViewController;
-@property (strong, nonatomic) ProfileViewController *profileViewController;
+//@property (strong, nonatomic) ProfileViewController *profileViewController;
 @property (strong, nonatomic) SearchViewController *searchViewController;
 @property(strong, nonatomic) UIButton *burgerButton;
 @property(strong, nonatomic) UIPanGestureRecognizer *panGesture;
@@ -47,7 +47,6 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.2;
     [self setupSearchViewController];
     [self setupAdditonalMenuViewControllers];
     
-    self.viewControllers = @[self.topViewController, self.myQuestionsViewController];
 }
 
 -(BOOL)prefersStatusBarHidden{
@@ -66,7 +65,7 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.2;
 
 -(void)setupSearchViewController{
     SearchViewController *searchVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
-    searchVC.tableView.delegate = self;
+//    searchVC.tableView.delegate = self;
     [self addChildViewController:searchVC];
     searchVC.view.frame = self.view.frame;
     
@@ -80,10 +79,10 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.2;
     self.myQuestionsViewController = myQuestionsVC;
 }
 
-- (void)setUpProfileViewController {
-    ProfileViewController *profileVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfileViewController"];
-    self.profileViewController = profileVC;
-}
+//- (void)setUpProfileViewController {
+//    ProfileViewController *profileVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfileViewController"];
+//    self.profileViewController = profileVC;
+//}
 
 -(void)setupBurgerButton{
     UIButton *burgerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kburgerButtonWidth, kburgerButtonHeight)];

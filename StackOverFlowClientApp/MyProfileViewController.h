@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.h
+//  MyProfileViewController.h
 //  StackOverFlowClientApp
 //
 //  Created by Cynthia Whitlatch on 12/10/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProfileViewController : UIViewController
+@interface MyProfileViewController : UIViewController
 
 @end

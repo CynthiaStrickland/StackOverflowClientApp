@@ -8,6 +8,3 @@
 
 #import "SearchAPIService.h"
 
-@implementation SearchAPIService
-
-@end
