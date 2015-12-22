@@ -8,6 +8,10 @@
 
 
 #import "MyProfileViewController.h"
+#import "MyProfileService.h"
+#import "MyProfileJSONParser.h"
+#import "ImageFetchService.h"
+#import "Error.h"
 #import "User.h"
 
 @interface MyProfileViewController ()
@@ -22,7 +26,20 @@
 @implementation MyProfileViewController
 
 - (void)viewDidLoad {
-//    [self loadUser];
+    [super viewDidLoad];
+    [MyProfileService getMyProfileWithCompletion:^(NSDictionary *dictionary, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            [MyProfileJSONParser myProfileFromDictionary:dictionary completion:^(User *user, NSError *error) {
+                _displayNameLabel.text = [NSString stringWithFormat:@"Name: %@", user.displayName];
+                _userIDLabel.text = [NSString stringWithFormat:@"User ID: %i", user.userID];
+                [ImageFetchService getImageWithURL:user.profileImageURL completion:^(UIImage *data, NSError *error) {
+                    _imageView.image = data;
+                }];
+            }];
+        }
+    }];
 }
 
 - (void)setUser:(User *)User {

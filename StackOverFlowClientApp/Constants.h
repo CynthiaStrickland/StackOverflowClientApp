@@ -15,7 +15,9 @@ typedef void(^kNSDataCompletionHandler)(NSData *data, NSError *error);
 typedef void(^kNSArrayCompletionHandler)(NSArray *array, NSError *error);
 typedef void(^kNSDictionaryCompletionHandler)(NSDictionary *dictionary, NSError *error);
 typedef void(^kUIImageCompletionHandler)(UIImage *image, NSError *error);
-typedef void(^kIdCompletionHandler)(id responseObject, NSError *error);
+typedef void(^kIDCompletionHandler)(id responseObject, NSError *error);
+typedef void (^kUserCompletionHandler)(User *user, NSError *error);
+
 
 
 

@@ -9,3 +9,12 @@
 #import <Foundation/Foundation.h>
 
 static NSString * const kStackErrorCodes = @"Stack Error";
+
+typedef enum : NSInteger {
+    StackOverflowBadGetRequest,
+    StackOverflowSearchFailed,
+    StackOverflowJSONParseFailed,
+    StackOverflowImageFetchFailed,
+    StackOverflowQuestionFetchFailed,
+    StackOverflowProfileFetchFailed,
+} StackOverflowErrorCodes;
