@@ -1,17 +1,17 @@
 //
-//  MyQuestionsJSONParser.m
-//  SearchOverflow
+//  QuestionsJSONParser.m
+//  StackOverFlowClientApp
 //
-//  Created by William Cremin on 12/9/15.
-//  Copyright © 2015 William Cremin. All rights reserved.
+//  Created by Cynthia Whitlatch on 12/8/15.
+//  Copyright © 2015 Cynthia Whitlatch. All rights reserved.
 //
 
-#import "MyQuestionsJSONParser.h"
+#import "QuestionsJSONParser.h"
 #import "User.h"
 #import "Question.h"
 #import "Error.h"
 
-@implementation MyQuestionsJSONParser
+@implementation QuestionsJSONParser
 
 + (void)myQuestionsFromDictionary:(NSDictionary *)dictionary completion:(kNSArrayCompletionHandler)completion {
     if (dictionary) {
