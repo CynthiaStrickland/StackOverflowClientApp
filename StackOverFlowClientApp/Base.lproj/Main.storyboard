@@ -8,7 +8,7 @@
         <!--Burger Menu View Controller-->
         <scene sceneID="Uka-uB-Edn">
             <objects>
-                <viewController id="fNs-S9-7Wn" customClass="BurgerMenuViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BurgerMenuViewController" id="fNs-S9-7Wn" customClass="BurgerMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zbc-B7-K81"/>
                         <viewControllerLayoutGuide type="bottom" id="Tlv-M0-48S"/>
@@ -27,15 +27,15 @@
         <scene sceneID="PJR-1n-LuX">
             <objects>
                 <tableViewController storyboardIdentifier="MenuTableViewController" id="F4e-bS-IUh" customClass="MenuTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hxm-Z7-WyQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="60" sectionFooterHeight="28" id="Hxm-Z7-WyQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection headerTitle="Menu" id="D3j-HR-1Jp">
+                            <tableViewSection id="GtT-nC-tUM">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="nxB-in-dGL" style="IBUITableViewCellStyleDefault" id="apT-La-afd">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="apT-La-afd" id="EIj-oZ-e1I">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -52,7 +52,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="UDL-FF-U6E" style="IBUITableViewCellStyleDefault" id="YOu-m9-RXA">
-                                        <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="44" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YOu-m9-RXA" id="Qoe-5b-Qjl">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -69,7 +69,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="g6z-Xm-Dif" style="IBUITableViewCellStyleDefault" id="nBL-yQ-JNX">
-                                        <rect key="frame" x="0.0" y="116" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="88" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nBL-yQ-JNX" id="2W1-fB-2Td">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -88,15 +88,7 @@
                                 </cells>
                             </tableViewSection>
                         </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="F4e-bS-IUh" id="m9Z-nD-dQh"/>
-                            <outlet property="delegate" destination="F4e-bS-IUh" id="uLf-vZ-dw8"/>
-                        </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="myQuestionsLabel" destination="YOu-m9-RXA" id="Tx2-2z-d6G"/>
-                        <outlet property="searchQuestionsLabel" destination="apT-La-afd" id="gCk-qQ-uAy"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPT-Gn-kJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,7 +110,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuestionCell" textLabel="PPI-hS-IYy" style="IBUITableViewCellStyleDefault" id="afJ-kN-0Ml">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyQuestionsViewControllerCell" textLabel="PPI-hS-IYy" style="IBUITableViewCellStyleDefault" id="afJ-kN-0Ml">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="afJ-kN-0Ml" id="vxD-Je-ywt">
@@ -236,10 +228,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4yy-Bp-dd7">
                                 <rect key="frame" x="0.0" y="107" width="600" height="493"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="ks9-fs-ftF" id="z8Q-Td-RkQ"/>
-                                    <outlet property="delegate" destination="ks9-fs-ftF" id="FcQ-hH-3Fq"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

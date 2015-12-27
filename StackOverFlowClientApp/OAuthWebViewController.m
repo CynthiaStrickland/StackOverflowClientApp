@@ -6,7 +6,6 @@
 //  Copyright © 2015 Cynthia Whitlatch. All rights reserved.
 //
 
-#import "ErrorDomainViewController.h"
 #import "OAuthWebViewController.h"
 @import WebKit;
 
@@ -18,7 +17,6 @@ NSString const *kRedirectURI = @"https://stackexchange.com/oauth/login_success";
 
 @property(strong, nonatomic) WKWebView *webView;
 
-
 @end
 
 @implementation OAuthWebViewController
@@ -27,8 +25,7 @@ NSString const *kRedirectURI = @"https://stackexchange.com/oauth/login_success";
     [super viewDidLoad];
         
     self.webView = [[WKWebView alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:self.webView];
-    
+    [self.view addSubview:self.webView];    
     self.webView.navigationDelegate = self;
     
     NSString *stackURLString = [NSString stringWithFormat:@"%@client_id=%@&redirect_uri=%@&scope=write_access", kBaseURL, kClientID, kRedirectURI];
@@ -49,9 +46,9 @@ NSString const *kRedirectURI = @"https://stackexchange.com/oauth/login_success";
     
     if([requestURL.description containsString:@"access_token"]){
         NSArray *urlComponents = [[requestURL description] componentsSeparatedByString:@"="];
-        NSString *accessToken = urlComponents.lastObject;
+        NSString *accessToken = urlComponents.firstObject;
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setObject:accessToken forKey:@"accessToken"];
+        [userDefaults setObject:accessToken forKey:@"access_token"];
         [userDefaults synchronize];
         
         if (self.completion) {

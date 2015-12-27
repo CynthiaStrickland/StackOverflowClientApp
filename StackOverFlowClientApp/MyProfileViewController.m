@@ -11,7 +11,7 @@
 #import "MyProfileService.h"
 #import "Error.h"
 #import "User.h"
-#import "MyProfileJSONParser.h"
+#import "ProfileJSONParser.h"
 #import "ImageFetchService.h"
 
 
@@ -32,7 +32,7 @@
         if (error) {
             NSLog(@"%@", error);
         } else {
-            [MyProfileJSONParser myProfileFromDictionary:dictionary completion:^(User *user, NSError *error) {
+            [ProfileJSONParser myProfileFromDictionary:dictionary completion:^(User *user, NSError *error) {
                 _displayNameLabel.text = [NSString stringWithFormat:@"Name: %@", user.displayName];
                 _userIDLabel.text = [NSString stringWithFormat:@"User ID: %i", user.userID];
                 [ImageFetchService getImageWithURL:user.profileImageURL completion:^(UIImage *data, NSError *error) {

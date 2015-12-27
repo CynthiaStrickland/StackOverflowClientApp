@@ -1,10 +1,8 @@
-//
 //  MenuTableViewController.m
-//  SearchOverflow
+//  StackOverFlowClientApp
 //
-//  Created by William Cremin on 12/7/15.
-//  Copyright © 2015 William Cremin. All rights reserved.
-//
+//  Created by Cynthia Whitlatch on 12/7/15.
+//  Copyright © 2015 Cynthia Whitlatch. All rights reserved.
 
 #import "MenuTableViewController.h"
 

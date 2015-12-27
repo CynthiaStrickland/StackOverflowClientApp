@@ -14,9 +14,9 @@
 
 @interface SearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
+@property (strong, nonatomic) NSArray *dataSource;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) NSArray *dataSource;
 
 @end
 
@@ -40,7 +40,7 @@
     self.tableView.dataSource = self;
     
     UINib *nib = [UINib nibWithNibName:@"SearchTableViewCell" bundle:nil];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"Cell"];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"cell"];
     
 }
 
@@ -53,7 +53,7 @@
 #pragma mark - UISearchBar Delegate
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    [SearchAPIService searchWithTerm:self.searchBar.text pageNumber:1 completion:^(NSDictionary *data, NSError *error) {
+    [SearchAPIService searchTerms:self.searchBar.text pageNumber:1 completion:^(NSDictionary *data, NSError *error) {
         if (error) {
             NSLog(@"%@", error);
         } else {
@@ -87,7 +87,7 @@
 #pragma mark - UITableView Delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 66;
+    return 50;
 }
 
 @end

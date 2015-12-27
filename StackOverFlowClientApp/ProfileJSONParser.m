@@ -1,17 +1,17 @@
 //
-//  MyProfileJSONParser.m
+//  ProfileJSONParser.m
 //  StackOverFlowClientApp
 //
 //  Created by Cynthia Whitlatch on 12/8/15.
 //  Copyright © 2015 Cynthia Whitlatch. All rights reserved.
 //
 
-#import "MyProfileJSONParser.h"
+#import "ProfileJSONParser.h"
 #import "Error.h"
 #import "User.h"
 #import "Question.h"
 
-@implementation MyProfileJSONParser
+@implementation ProfileJSONParser
 
 + (void)myProfileFromDictionary:(NSDictionary *)dictionary completion:(kUserCompletionHandler)completion {
     if (dictionary) {
@@ -23,7 +23,7 @@
             NSString *profileImageURLString = userInfo[@"profile_image"];
             NSURL *profileImageURL = [NSURL URLWithString:profileImageURLString];
             
-            User *user = [[User alloc]initWithName:displayName link:nil userID:userID reputation:nil profileImageURL:profileImageURL profileImage:nil viewCount:nil title:nil userType:userInfo];
+            User *user = [[User alloc]initWithName:displayName link:nil userID:userID reputation:nil profileImageURL:profileImageURL profileImage:nil viewCount:nil title:nil userType:nil];
             
             if (user) {
                 completion(user, nil);

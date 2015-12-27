@@ -13,9 +13,8 @@
 
 @implementation SearchAPIService
 
-+ (void)searchWithTerm:(NSString *)searchTerm pageNumber:(int)pageNumber completion:(kNSDictionaryCompletionHandler)completion {
++ (void)searchTerms:(NSString *)searchTerm pageNumber:(int)pageNumber completion:(kNSDictionaryCompletionHandler)completion {
     NSString *searchURL = @"https://api.stackexchange.com/2.2/search";
-    
     NSMutableDictionary *parameters = [[NSMutableDictionary alloc]init];
     NSString *pageNumberString;
     

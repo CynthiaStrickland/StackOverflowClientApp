@@ -6,9 +6,8 @@
 //  Copyright © 2015 Cynthia Whitlatch. All rights reserved.
 //
 
-#import "BurgerMenuViewController.h"
 #import "MenuTableViewController.h"
-#import "MainContentViewController.h"
+#import "BurgerMenuViewController.h"
 #import "MyQuestionsViewController.h"
 #import "SearchViewController.h"
 #import "MyProfileViewController.h"
@@ -21,8 +20,8 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.2;
 
 @interface BurgerMenuViewController ()<UITableViewDelegate>
 
-@property (strong,nonatomic) MenuTableViewController *menuTableViewController;
-@property (strong,nonatomic) MainContentViewController *topViewController;
+@property (strong, nonatomic) MenuTableViewController *menuViewController;
+@property (strong,nonatomic) UIViewController *topViewController;
 @property (strong, nonatomic) MyQuestionsViewController *myQuestionsViewController;
 @property (strong, nonatomic) MyProfileViewController *myProfileViewController;
 @property (strong, nonatomic) SearchViewController *searchViewController;
@@ -44,48 +43,55 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.2;
 }
 
 -(void)setupAllViewControllers{
-    [self setupMenuTableViewController];
-    [self setupSearchViewController];
-    [self setupAdditonalMenuViewControllers];
-    [self setUpProfileViewController];
+    [self setupMenuViewController];
+    [self setupTopViewController];
+    [self setupContentViewControllers];
+    self.viewControllers = @[self.searchViewController, self.myQuestionsViewController, self.myProfileViewController];
+
     
 }
 
--(BOOL)prefersStatusBarHidden{
-    return true;
+//-(BOOL)prefersStatusBarHidden{
+//    return true;
+//}
+
+- (void)setupMenuViewController {
+    MenuTableViewController *menuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MenuTableViewController"];
+    menuViewController.tableView.delegate = self;
+    [self addChildViewController:menuViewController];
+    menuViewController.view.frame = self.view.frame;
+    [self.view addSubview:menuViewController.view];
+    [menuViewController didMoveToParentViewController:self];
+    self.menuViewController = menuViewController;
 }
 
--(void)setupMenuTableViewController{
-    MenuTableViewController *menuTableVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MenuTableViewController"];
-    menuTableVC.tableView.delegate = self;
-    [self addChildViewController:menuTableVC];
-    menuTableVC.view.frame = self.view.frame;
-    [self.view addSubview:menuTableVC.view];
-    [menuTableVC didMoveToParentViewController:self];
-    self.menuTableViewController = menuTableVC;
+- (void)setupTopViewController {
+    SearchViewController *searchViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
+    [self addChildViewController:searchViewController];
+    searchViewController.view.frame = self.view.frame;
+    [self.view addSubview:searchViewController.view];
+    [searchViewController didMoveToParentViewController:self];
+    self.topViewController = searchViewController;
 }
 
--(void)setupSearchViewController{
+-(void)setupContentViewControllers{
     SearchViewController *searchVC = [self.storyboard instantiateViewControllerWithIdentifier:@"SearchViewController"];
-//    searchVC.tableView.delegate = self;
-    [self addChildViewController:searchVC];
-    searchVC.view.frame = self.view.frame;
-    
-    [self.view addSubview:searchVC.view];
-    [searchVC didMoveToParentViewController:self];
     self.searchViewController = searchVC;
-}
-
--(void)setupAdditonalMenuViewControllers{
+    
+//    searchVC.tableView.delegate = self;
+//    [self addChildViewController:searchVC];
+//    searchVC.view.frame = self.view.frame;
+//    [self.view addSubview:searchVC.view];
+//    [searchVC didMoveToParentViewController:self];
+//    self.searchViewController = searchVC;
+    
     MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestionsViewController"];
     self.myQuestionsViewController = myQuestionsVC;
-}
-
-- (void)setUpProfileViewController {
     MyProfileViewController *profileVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyProfileViewController"];
     self.myProfileViewController = profileVC;
 }
 
+#pragma BUTTONS & GESTURES
 -(void)setupBurgerButton{
     UIButton *burgerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kburgerButtonWidth, kburgerButtonHeight)];
     [burgerButton setImage:[UIImage imageNamed:@"emptyStar"] forState:UIControlStateNormal];

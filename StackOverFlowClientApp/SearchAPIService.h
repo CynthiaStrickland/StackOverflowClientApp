@@ -11,6 +11,6 @@
 
 @interface SearchAPIService : NSObject
 
-+ (void)searchWithTerm:(NSString *)searchTerm pageNumber:(int)pageNumber completion:(kNSDictionaryCompletionHandler)completion;
++ (void)searchTerms:(NSString *)searchTerm pageNumber:(int)pageNumber completion:(kNSDictionaryCompletionHandler)completion;
 
 @end

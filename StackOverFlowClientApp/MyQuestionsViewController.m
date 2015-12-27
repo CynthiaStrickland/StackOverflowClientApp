@@ -7,8 +7,8 @@
 //
 
 #import "MyQuestionsViewController.h"
-#import "MyQuestionsService.h"
-#import "MyQuestionsJSONParser.h"
+#import "QuestionsService.h"
+#import "QuestionsJSONParser.h"
 #import "Question.h"
 
 @interface MyQuestionsViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -29,11 +29,11 @@
 #pragma mark - Set up UITableView
 
 - (void)setupTableViewWithData {
-    [MyQuestionsService getMyQuestionsWithCompletion:^(NSDictionary *dictionary, NSError *error) {
+    [QuestionsService getMyQuestionsWithCompletion:^(NSDictionary *dictionary, NSError *error) {
         if (error) {
             NSLog(@"%@", error);
         } else {
-            [MyQuestionsJSONParser myQuestionsFromDictionary:dictionary completion:^(NSArray *data, NSError *error) {
+            [QuestionsJSONParser myQuestionsFromDictionary:dictionary completion:^(NSArray *data, NSError *error) {
                 if (data.count > 0) {
                     [self setDataSource:data];
                 }
@@ -61,7 +61,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QuestionCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyQuestionsViewControllerCell"];
     if (_dataSource) {
         Question *questionForCell = self.dataSource[indexPath.row];
         cell.textLabel.text = questionForCell.title;

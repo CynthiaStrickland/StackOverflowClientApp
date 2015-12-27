@@ -9,7 +9,6 @@
 @import Foundation;
 @import UIKit;
 #import "User.h"
-#import "Constants.h"
 
 typedef void(^kNSDataCompletionHandler)(NSData *data, NSError *error);
 typedef void(^kNSArrayCompletionHandler)(NSArray *array, NSError *error);

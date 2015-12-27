@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3D375A991C29E0CD00FF331C /* KeychainService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375A981C29E0CD00FF331C /* KeychainService.m */; };
-		3D375A9B1C29E4E000FF331C /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375A9A1C29E4E000FF331C /* Error.m */; };
 		3D375A9E1C29E56700FF331C /* ImageFetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375A9D1C29E56700FF331C /* ImageFetchService.m */; };
 		3D375AA11C29E61E00FF331C /* MyProfileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375AA01C29E61E00FF331C /* MyProfileService.m */; };
-		3D375AA41C29E6AA00FF331C /* MyProfileJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375AA31C29E6AA00FF331C /* MyProfileJSONParser.m */; };
-		3D375AA71C29E8CF00FF331C /* MyQuestionsJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375AA61C29E8CF00FF331C /* MyQuestionsJSONParser.m */; };
-		3D375AAA1C29EBAB00FF331C /* MyQuestionsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375AA91C29EBAB00FF331C /* MyQuestionsService.m */; };
+		3D375AA41C29E6AA00FF331C /* ProfileJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375AA31C29E6AA00FF331C /* ProfileJSONParser.m */; };
+		3D375AA71C29E8CF00FF331C /* QuestionsJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375AA61C29E8CF00FF331C /* QuestionsJSONParser.m */; };
+		3D375AAA1C29EBAB00FF331C /* QuestionsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375AA91C29EBAB00FF331C /* QuestionsService.m */; };
 		3D375AAC1C29EE8300FF331C /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D375AAB1C29EE8300FF331C /* SearchTableViewCell.xib */; };
 		3D375AAF1C2A0FFB00FF331C /* SearchJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375AAE1C2A0FFB00FF331C /* SearchJSONParser.m */; };
+		3D375AB21C2A2B0300FF331C /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D375AB11C2A2B0300FF331C /* MenuTableViewController.m */; };
 		3D3F6EF91C1A1B41003E11BF /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F6EF81C1A1B41003E11BF /* SearchTableViewCell.m */; };
 		3D3F6EFC1C1A1B67003E11BF /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F6EFB1C1A1B67003E11BF /* MyProfileViewController.m */; };
 		3D7D71E51C15F7AE0090A82C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D71E41C15F7AE0090A82C /* main.m */; };
@@ -26,18 +26,14 @@
 		3D7D71FE1C15F7AE0090A82C /* StackOverFlowClientAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D71FD1C15F7AE0090A82C /* StackOverFlowClientAppTests.m */; };
 		3D7D72091C15F7AE0090A82C /* StackOverFlowClientAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72081C15F7AE0090A82C /* StackOverFlowClientAppUITests.m */; };
 		3D7D721B1C15F85E0090A82C /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */; };
-		3D7D72211C15F93B0090A82C /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72201C15F93B0090A82C /* MenuTableViewController.m */; };
 		3D7D72241C15F96F0090A82C /* BurgerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72231C15F96F0090A82C /* BurgerMenuViewController.m */; };
 		3D7D72261C15FF010090A82C /* emptyStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D72251C15FF010090A82C /* emptyStar.png */; };
 		3D7D72281C160DC50090A82C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7D72271C160DC50090A82C /* WebKit.framework */; };
 		3D7D722B1C1611C90090A82C /* OAuthWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */; };
-		3D7D722E1C165A7A0090A82C /* ErrorDomainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */; };
 		3D7D72331C1759F70090A82C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72321C1759F70090A82C /* User.m */; };
 		3D7D72361C175B9A0090A82C /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72351C175B9A0090A82C /* Question.m */; };
 		3D7D72391C175CE70090A82C /* JSONRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72381C175CE70090A82C /* JSONRequestService.m */; };
 		3D7D723C1C1762540090A82C /* SearchAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D723B1C1762540090A82C /* SearchAPIService.m */; };
-		3D7D729C1C18D63A0090A82C /* MyQuestionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7D729B1C18D63A0090A82C /* MyQuestionsTableViewCell.xib */; };
-		3D7D72A31C18E9BB0090A82C /* MainContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72A21C18E9BB0090A82C /* MainContentViewController.m */; };
 		3D7D72A61C18EDA80090A82C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D72A51C18EDA80090A82C /* SearchViewController.m */; };
 		5956946307CF2DB5952D1D10 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF5391749BD05C64A597744 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -62,20 +58,21 @@
 /* Begin PBXFileReference section */
 		3D375A971C29E0C300FF331C /* KeychainService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainService.h; sourceTree = "<group>"; };
 		3D375A981C29E0CD00FF331C /* KeychainService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainService.m; sourceTree = "<group>"; };
-		3D375A9A1C29E4E000FF331C /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
 		3D375A9C1C29E56700FF331C /* ImageFetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFetchService.h; sourceTree = "<group>"; };
 		3D375A9D1C29E56700FF331C /* ImageFetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFetchService.m; sourceTree = "<group>"; };
 		3D375A9F1C29E61E00FF331C /* MyProfileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileService.h; sourceTree = "<group>"; };
 		3D375AA01C29E61E00FF331C /* MyProfileService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileService.m; sourceTree = "<group>"; };
-		3D375AA21C29E6AA00FF331C /* MyProfileJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileJSONParser.h; sourceTree = "<group>"; };
-		3D375AA31C29E6AA00FF331C /* MyProfileJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileJSONParser.m; sourceTree = "<group>"; };
-		3D375AA51C29E8CF00FF331C /* MyQuestionsJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsJSONParser.h; sourceTree = "<group>"; };
-		3D375AA61C29E8CF00FF331C /* MyQuestionsJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsJSONParser.m; sourceTree = "<group>"; };
-		3D375AA81C29EBAB00FF331C /* MyQuestionsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsService.h; sourceTree = "<group>"; };
-		3D375AA91C29EBAB00FF331C /* MyQuestionsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsService.m; sourceTree = "<group>"; };
+		3D375AA21C29E6AA00FF331C /* ProfileJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileJSONParser.h; sourceTree = "<group>"; };
+		3D375AA31C29E6AA00FF331C /* ProfileJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileJSONParser.m; sourceTree = "<group>"; };
+		3D375AA51C29E8CF00FF331C /* QuestionsJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsJSONParser.h; sourceTree = "<group>"; };
+		3D375AA61C29E8CF00FF331C /* QuestionsJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsJSONParser.m; sourceTree = "<group>"; };
+		3D375AA81C29EBAB00FF331C /* QuestionsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsService.h; sourceTree = "<group>"; };
+		3D375AA91C29EBAB00FF331C /* QuestionsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsService.m; sourceTree = "<group>"; };
 		3D375AAB1C29EE8300FF331C /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		3D375AAD1C2A0FFB00FF331C /* SearchJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchJSONParser.h; sourceTree = "<group>"; };
 		3D375AAE1C2A0FFB00FF331C /* SearchJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchJSONParser.m; sourceTree = "<group>"; };
+		3D375AB01C2A2B0300FF331C /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		3D375AB11C2A2B0300FF331C /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		3D3F6EF71C1A1B41003E11BF /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
 		3D3F6EF81C1A1B41003E11BF /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
 		3D3F6EFA1C1A1B67003E11BF /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
@@ -96,16 +93,12 @@
 		3D7D720A1C15F7AE0090A82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D7D72191C15F85E0090A82C /* MyQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsViewController.h; sourceTree = "<group>"; };
 		3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
-		3D7D721F1C15F93B0090A82C /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewController.h; path = ../MenuTableViewController.h; sourceTree = "<group>"; };
-		3D7D72201C15F93B0090A82C /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewController.m; path = ../MenuTableViewController.m; sourceTree = "<group>"; };
 		3D7D72221C15F96F0090A82C /* BurgerMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurgerMenuViewController.h; sourceTree = "<group>"; };
 		3D7D72231C15F96F0090A82C /* BurgerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurgerMenuViewController.m; sourceTree = "<group>"; };
 		3D7D72251C15FF010090A82C /* emptyStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyStar.png; sourceTree = "<group>"; };
 		3D7D72271C160DC50090A82C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3D7D72291C1611C90090A82C /* OAuthWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthWebViewController.h; sourceTree = "<group>"; };
 		3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthWebViewController.m; sourceTree = "<group>"; };
-		3D7D722C1C165A7A0090A82C /* ErrorDomainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorDomainViewController.h; sourceTree = "<group>"; };
-		3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorDomainViewController.m; sourceTree = "<group>"; };
 		3D7D72311C1759F70090A82C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		3D7D72321C1759F70090A82C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		3D7D72341C175B9A0090A82C /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
@@ -115,10 +108,7 @@
 		3D7D723A1C1762540090A82C /* SearchAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAPIService.h; sourceTree = "<group>"; };
 		3D7D723B1C1762540090A82C /* SearchAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAPIService.m; sourceTree = "<group>"; };
 		3D7D723F1C1793ED0090A82C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		3D7D729B1C18D63A0090A82C /* MyQuestionsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQuestionsTableViewCell.xib; sourceTree = "<group>"; };
 		3D7D729E1C18E2740090A82C /* Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Error.h; sourceTree = "<group>"; };
-		3D7D72A11C18E9BB0090A82C /* MainContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainContentViewController.h; sourceTree = "<group>"; };
-		3D7D72A21C18E9BB0090A82C /* MainContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainContentViewController.m; sourceTree = "<group>"; };
 		3D7D72A41C18EDA80090A82C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		3D7D72A51C18EDA80090A82C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		AB5BCFA80AEDD56A9469E382 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -198,25 +188,25 @@
 		3D7D71E21C15F7AE0090A82C /* StackOverFlowClientApp */ = {
 			isa = PBXGroup;
 			children = (
+				3D3F6EF71C1A1B41003E11BF /* SearchTableViewCell.h */,
+				3D3F6EF81C1A1B41003E11BF /* SearchTableViewCell.m */,
 				3D7D71E61C15F7AE0090A82C /* AppDelegate.h */,
 				3D7D71E71C15F7AE0090A82C /* AppDelegate.m */,
 				3D7D723E1C17628D0090A82C /* CONTROLLERS */,
 				3D7D723D1C1762700090A82C /* MODELS */,
 				3D7D723F1C1793ED0090A82C /* Constants.h */,
-				3D3F6EF71C1A1B41003E11BF /* SearchTableViewCell.h */,
-				3D3F6EF81C1A1B41003E11BF /* SearchTableViewCell.m */,
 				3D7D72371C175CE70090A82C /* JSONRequestService.h */,
 				3D7D72381C175CE70090A82C /* JSONRequestService.m */,
 				3D375AAD1C2A0FFB00FF331C /* SearchJSONParser.h */,
 				3D375AAE1C2A0FFB00FF331C /* SearchJSONParser.m */,
 				3D375A9F1C29E61E00FF331C /* MyProfileService.h */,
 				3D375AA01C29E61E00FF331C /* MyProfileService.m */,
-				3D375AA21C29E6AA00FF331C /* MyProfileJSONParser.h */,
-				3D375AA31C29E6AA00FF331C /* MyProfileJSONParser.m */,
-				3D375AA81C29EBAB00FF331C /* MyQuestionsService.h */,
-				3D375AA91C29EBAB00FF331C /* MyQuestionsService.m */,
-				3D375AA51C29E8CF00FF331C /* MyQuestionsJSONParser.h */,
-				3D375AA61C29E8CF00FF331C /* MyQuestionsJSONParser.m */,
+				3D375AA21C29E6AA00FF331C /* ProfileJSONParser.h */,
+				3D375AA31C29E6AA00FF331C /* ProfileJSONParser.m */,
+				3D375AA81C29EBAB00FF331C /* QuestionsService.h */,
+				3D375AA91C29EBAB00FF331C /* QuestionsService.m */,
+				3D375AA51C29E8CF00FF331C /* QuestionsJSONParser.h */,
+				3D375AA61C29E8CF00FF331C /* QuestionsJSONParser.m */,
 				3D375A971C29E0C300FF331C /* KeychainService.h */,
 				3D375A981C29E0CD00FF331C /* KeychainService.m */,
 				3D375A9C1C29E56700FF331C /* ImageFetchService.h */,
@@ -224,7 +214,6 @@
 				3D7D723A1C1762540090A82C /* SearchAPIService.h */,
 				3D7D723B1C1762540090A82C /* SearchAPIService.m */,
 				3D7D729E1C18E2740090A82C /* Error.h */,
-				3D375A9A1C29E4E000FF331C /* Error.m */,
 				3D7D72341C175B9A0090A82C /* Question.h */,
 				3D7D72351C175B9A0090A82C /* Question.m */,
 				3D7D72311C1759F70090A82C /* User.h */,
@@ -274,18 +263,14 @@
 			children = (
 				3D7D72221C15F96F0090A82C /* BurgerMenuViewController.h */,
 				3D7D72231C15F96F0090A82C /* BurgerMenuViewController.m */,
-				3D7D721F1C15F93B0090A82C /* MenuTableViewController.h */,
-				3D7D72201C15F93B0090A82C /* MenuTableViewController.m */,
+				3D375AB01C2A2B0300FF331C /* MenuTableViewController.h */,
+				3D375AB11C2A2B0300FF331C /* MenuTableViewController.m */,
 				3D7D72191C15F85E0090A82C /* MyQuestionsViewController.h */,
 				3D7D721A1C15F85E0090A82C /* MyQuestionsViewController.m */,
 				3D3F6EFA1C1A1B67003E11BF /* MyProfileViewController.h */,
 				3D3F6EFB1C1A1B67003E11BF /* MyProfileViewController.m */,
 				3D7D72A41C18EDA80090A82C /* SearchViewController.h */,
 				3D7D72A51C18EDA80090A82C /* SearchViewController.m */,
-				3D7D722C1C165A7A0090A82C /* ErrorDomainViewController.h */,
-				3D7D722D1C165A7A0090A82C /* ErrorDomainViewController.m */,
-				3D7D72A11C18E9BB0090A82C /* MainContentViewController.h */,
-				3D7D72A21C18E9BB0090A82C /* MainContentViewController.m */,
 				3D7D72291C1611C90090A82C /* OAuthWebViewController.h */,
 				3D7D722A1C1611C90090A82C /* OAuthWebViewController.m */,
 			);
@@ -298,7 +283,6 @@
 				3D7D71EC1C15F7AE0090A82C /* Main.storyboard */,
 				3D7D71F11C15F7AE0090A82C /* LaunchScreen.storyboard */,
 				3D375AAB1C29EE8300FF331C /* SearchTableViewCell.xib */,
-				3D7D729B1C18D63A0090A82C /* MyQuestionsTableViewCell.xib */,
 			);
 			name = VIEWS;
 			path = StackOverFlowClientApp;
@@ -410,7 +394,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D7D729C1C18D63A0090A82C /* MyQuestionsTableViewCell.xib in Resources */,
 				3D7D71F31C15F7AE0090A82C /* LaunchScreen.storyboard in Resources */,
 				3D7D72261C15FF010090A82C /* emptyStar.png in Resources */,
 				3D7D71F01C15F7AE0090A82C /* Assets.xcassets in Resources */,
@@ -488,27 +471,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D375A9B1C29E4E000FF331C /* Error.m in Sources */,
 				3D7D72331C1759F70090A82C /* User.m in Sources */,
 				3D375AAF1C2A0FFB00FF331C /* SearchJSONParser.m in Sources */,
-				3D375AAA1C29EBAB00FF331C /* MyQuestionsService.m in Sources */,
+				3D375AAA1C29EBAB00FF331C /* QuestionsService.m in Sources */,
 				3D375A991C29E0CD00FF331C /* KeychainService.m in Sources */,
+				3D375AB21C2A2B0300FF331C /* MenuTableViewController.m in Sources */,
 				3D7D723C1C1762540090A82C /* SearchAPIService.m in Sources */,
 				3D3F6EFC1C1A1B67003E11BF /* MyProfileViewController.m in Sources */,
-				3D7D72A31C18E9BB0090A82C /* MainContentViewController.m in Sources */,
 				3D7D72241C15F96F0090A82C /* BurgerMenuViewController.m in Sources */,
 				3D7D722B1C1611C90090A82C /* OAuthWebViewController.m in Sources */,
 				3D7D72A61C18EDA80090A82C /* SearchViewController.m in Sources */,
-				3D375AA71C29E8CF00FF331C /* MyQuestionsJSONParser.m in Sources */,
-				3D375AA41C29E6AA00FF331C /* MyProfileJSONParser.m in Sources */,
-				3D7D72211C15F93B0090A82C /* MenuTableViewController.m in Sources */,
+				3D375AA71C29E8CF00FF331C /* QuestionsJSONParser.m in Sources */,
+				3D375AA41C29E6AA00FF331C /* ProfileJSONParser.m in Sources */,
 				3D375A9E1C29E56700FF331C /* ImageFetchService.m in Sources */,
 				3D7D71E81C15F7AE0090A82C /* AppDelegate.m in Sources */,
 				3D375AA11C29E61E00FF331C /* MyProfileService.m in Sources */,
 				3D7D71E51C15F7AE0090A82C /* main.m in Sources */,
 				3D7D72361C175B9A0090A82C /* Question.m in Sources */,
 				3D7D721B1C15F85E0090A82C /* MyQuestionsViewController.m in Sources */,
-				3D7D722E1C165A7A0090A82C /* ErrorDomainViewController.m in Sources */,
 				3D7D72391C175CE70090A82C /* JSONRequestService.m in Sources */,
 				3D3F6EF91C1A1B41003E11BF /* SearchTableViewCell.m in Sources */,
 			);

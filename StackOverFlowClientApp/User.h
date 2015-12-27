@@ -11,11 +11,11 @@
 
 @interface User : NSObject
 
--(id)initWithName:(NSString*)displayName link:(NSURL *)link userID:(NSInteger *)userID reputation:(NSInteger *)reputation profileImageURL:(NSURL *)profileImageURL profileImage:(UIImage *)profileImage viewCount:(NSInteger *)viewCount title:(NSString *)title userType:(NSString *)userType;
+-(id)initWithName:(NSString*)displayName link:(NSURL *)link userID:(int)userID reputation:(NSInteger *)reputation profileImageURL:(NSURL *)profileImageURL profileImage:(UIImage *)profileImage viewCount:(NSInteger *)viewCount title:(NSString *)title userType:(NSString *)userType;
 
 @property NSString *displayName;
 @property NSURL *link;
-@property NSInteger *userID;
+@property int userID;
 @property NSInteger *reputation;
 @property NSURL *profileImageURL;
 @property UIImage *profileImage;

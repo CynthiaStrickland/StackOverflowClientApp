@@ -1,5 +1,5 @@
 //
-//  MyQuestionsJSONParser.m
+//  QuestionsJSONParser.m
 //  StackOverFlowClientApp
 //
 //  Created by Cynthia Whitlatch on 12/8/15.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Constants.h"
 
-@interface MyQuestionsJSONParser : NSObject
+@interface QuestionsJSONParser : NSObject
 
 + (void)myQuestionsFromDictionary:(NSDictionary *)dictionary completion:(kNSArrayCompletionHandler)completion;
 
