@@ -49,6 +49,11 @@ NSString const *kRedirectURI = @"https://stackexchange.com/oauth/login_success";
         NSString *accessToken = urlComponents.firstObject;
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults setObject:accessToken forKey:@"access_token"];
+        NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
+        NSString *path = [documentsDirectory stringByAppendingPathComponent:@"token"];
+        [accessToken writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
+
+
         [userDefaults synchronize];
         
         if (self.completion) {

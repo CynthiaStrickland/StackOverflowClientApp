@@ -21,12 +21,11 @@
     NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
     NSString *path = [documentsDirectory stringByAppendingPathComponent:@"token"];
     NSString *token = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    
+    [parameters setObject:@"Eu3RuEDArh1FkwEJyyfZ)g((" forKey:@"key"];
     [parameters setObject:@"desc" forKey:@"order"];
     [parameters setObject:@"reputation" forKey:@"sort"];
     [parameters setObject:@"stackoverflow" forKey:@"site"];
     [parameters setObject:token forKey:@"access_token"];
-    [parameters setObject:@"5sifDpKBdfl)inxHMfHvNw((" forKey:@"key"];
     
     [JSONRequestService GETRequestWithURLString:searchURL parameters:parameters completion:^(id data, NSError *error) {
         if (error) {

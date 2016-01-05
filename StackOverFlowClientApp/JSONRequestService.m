@@ -7,16 +7,17 @@
 //
 
 #import "JSONRequestService.h"
-#import <AFNetworking/AFNetworking.h>
+#import "AFNetworking.h"
+#import "Error.h"
 
 @implementation JSONRequestService
 
-+ (void)GETRequestWithURLString:(NSString *)urlString parameters:(NSDictionary *)parameters completion:(kIDCompletionHandler)completion {
++ (void)GETRequestWithURLString:(NSString *)url parameters:(NSDictionary *)parameters completion:(kIDCompletionHandler)completion {
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     
-    NSOperationQueue *managerQueue = [manager operationQueue];
+    NSOperationQueue *managerQueue = manager.operationQueue;
     [manager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         switch (status) {
             case AFNetworkReachabilityStatusReachableViaWiFi:
@@ -29,10 +30,13 @@
         }
     }];
     
-    [manager GET:urlString parameters:parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    [manager GET:url parameters:parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         completion(responseObject, nil);
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         completion(nil, error);
+        NSLog(@"%@", url);
+        NSLog(@"%@", parameters);
+        
     }];
 }
 
